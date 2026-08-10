@@ -1,0 +1,2271 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "801d198d1792d7a9e9d55225d78b68ea4939c82d",
+  "generatedAt": "2026-08-10T15:54:13.067Z",
+  "files": {
+    "auth/alembic.ini": {
+      "contentHash": "f838a7746e2848a60a55ce43cfda960004fde51af2a1ed28115029301dba475b",
+      "totalLines": 120,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/auth_google.py": {
+      "contentHash": "c9110238e021a52290140f620bd7ba7aa2c1641ea0d958116e0b57b55dc7cc98",
+      "totalLines": 29,
+      "functions": 0,
+      "classes": 0,
+      "imports": 4,
+      "exports": 0
+    },
+    "auth/AUTH_MICROSERVICE_DESCRIPTION.md": {
+      "contentHash": "b968d60a268bc5be926fb2d56c47a7cd3a1a1d2fbb6aeaff282fabf57ac87493",
+      "totalLines": 597,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/config.py": {
+      "contentHash": "b9ebbb246b27ce2960e226f4a0a2b3d6d1cba03ed9f227a445e8c38f0d37dbb3",
+      "totalLines": 212,
+      "functions": 4,
+      "classes": 1,
+      "imports": 8,
+      "exports": 5
+    },
+    "auth/database/__init__.py": {
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "totalLines": 1,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/database/database.py": {
+      "contentHash": "7df8cc602ddec650aae019bda8dc57a0cfaffb67f76ecd9d51a17a58b5681ae2",
+      "totalLines": 78,
+      "functions": 2,
+      "classes": 0,
+      "imports": 6,
+      "exports": 2
+    },
+    "auth/database/models/__init__.py": {
+      "contentHash": "5ee14c2b9462ccd717a9f3a89490a74cad0ac3fbe9bdc0ffce4c9aa4e75eb312",
+      "totalLines": 14,
+      "functions": 0,
+      "classes": 0,
+      "imports": 5,
+      "exports": 0
+    },
+    "auth/database/models/onboarding.py": {
+      "contentHash": "d33bd39d64657148b8197b5720f15aa894ef56762d7f3564c8881c55a73725da",
+      "totalLines": 60,
+      "functions": 0,
+      "classes": 2,
+      "imports": 2,
+      "exports": 2
+    },
+    "auth/database/models/platform_admin.py": {
+      "contentHash": "a5b1c91593132f65f9d2263f36b48d7a1e693735b3db16b223d69e06b5334daf",
+      "totalLines": 14,
+      "functions": 0,
+      "classes": 1,
+      "imports": 2,
+      "exports": 1
+    },
+    "auth/database/models/support_access.py": {
+      "contentHash": "3308ee9634257281857572566112e7f6347629ced9188609c181e446221f6ccd",
+      "totalLines": 224,
+      "functions": 0,
+      "classes": 7,
+      "imports": 2,
+      "exports": 7
+    },
+    "auth/database/models/users.py": {
+      "contentHash": "d6be16da50a38ae8bd15c0dff55980a5f302b96ea2a6f98fc35b02d6ecab93d7",
+      "totalLines": 22,
+      "functions": 0,
+      "classes": 1,
+      "imports": 2,
+      "exports": 1
+    },
+    "auth/db_service_pb2_grpc.py": {
+      "contentHash": "d5e21d9715e202b0b45d50468d70beb623728966e02edda27e9f17f328f481a8",
+      "totalLines": 1785,
+      "functions": 8,
+      "classes": 24,
+      "imports": 3,
+      "exports": 32
+    },
+    "auth/db_service_pb2.py": {
+      "contentHash": "f8e4efaeef8e20f9d367354c8997d4fe51c5ad73505ddab8b28123939bb2cb30",
+      "totalLines": 155,
+      "functions": 0,
+      "classes": 0,
+      "imports": 5,
+      "exports": 0
+    },
+    "auth/docker-compose.test.yaml": {
+      "contentHash": "a8992912c1a2cdcaabac62c479ebe71c9dd1d8ba3f5541d260206da49de822a0",
+      "totalLines": 44,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/docker-compose.yaml": {
+      "contentHash": "662177a46b22de42b5f9838432a0cfb137c2e8fda4274fdf3921cf09b88dbbd1",
+      "totalLines": 35,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/Dockerfile": {
+      "contentHash": "96051dc91478121eec3738718b5612d06bdb49627274ca630e0dfd551a8e44fe",
+      "totalLines": 20,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/docs/auth_docs.py": {
+      "contentHash": "a32d5dd519d433bbde088361cba62c5d710625ff156057949abf7a328edf5b81",
+      "totalLines": 736,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/docs/diia_auth_docs.py": {
+      "contentHash": "9025c2cff707d0d3009ddcb90b71816504f0911b7f4b78a4e53f9da8e60ce7a7",
+      "totalLines": 434,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/docs/swagger_examples.py": {
+      "contentHash": "caba8a8bf6ba6b6f9964336cc567f268dd29f978e128e14ef2af0f0bc773c3e4",
+      "totalLines": 303,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/INTER_SERVICE_AUTH_PLAN.md": {
+      "contentHash": "e5f391bb268365237c9c72e3c1a3475a56489f12c8815ea21c97445467e2f17d",
+      "totalLines": 2175,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/logging_middleware.py": {
+      "contentHash": "9e8648b34174716b9ed695505210e502d99eb96fba737d826cd60ad707176a75",
+      "totalLines": 111,
+      "functions": 0,
+      "classes": 1,
+      "imports": 8,
+      "exports": 1
+    },
+    "auth/main.py": {
+      "contentHash": "ae58f436d452df53e24e0c1f15b91e994ddb21d8b6d377d92214cfb4d9dde633",
+      "totalLines": 128,
+      "functions": 5,
+      "classes": 0,
+      "imports": 18,
+      "exports": 5
+    },
+    "auth/middleware/network_security_middleware.py": {
+      "contentHash": "6f02c4ae939afbee72ac30823f1e8f7eaffd7ff57a731adf118e6b08e691f8c2",
+      "totalLines": 66,
+      "functions": 0,
+      "classes": 1,
+      "imports": 8,
+      "exports": 1
+    },
+    "auth/migrations/fix_duplicate_versions.py": {
+      "contentHash": "36db4ec309481264e22b910d1c257105cfe309781c8efbc5dd590a5bf2cb6337",
+      "totalLines": 49,
+      "functions": 1,
+      "classes": 0,
+      "imports": 3,
+      "exports": 1
+    },
+    "auth/migrations/README": {
+      "contentHash": "d1661f1d9e406a9f667132576eaaf497c525485b8834a48e6889bae865014210",
+      "totalLines": 5,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/migrations/script.py.mako": {
+      "contentHash": "dea06b1c17fb17b0a1283508762348b62497ac3a6041d33bb11d182b3a5a0b9d",
+      "totalLines": 29,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/migrations/versions/2025_01_15_1200_add_drfo_code_field.py": {
+      "contentHash": "9aff36a3421967c88e44d928a68c0fd47c7a9d1ff0a3a4ed7af0737964b8264c",
+      "totalLines": 29,
+      "functions": 2,
+      "classes": 0,
+      "imports": 2,
+      "exports": 2
+    },
+    "auth/migrations/versions/2025_01_15_1300_update_drfo_code_length.py": {
+      "contentHash": "1bc6f6c7c18422e1e5a626c3429a2472058692cb8b9f75361aea3d97687c8bcb",
+      "totalLines": 36,
+      "functions": 2,
+      "classes": 0,
+      "imports": 2,
+      "exports": 2
+    },
+    "auth/migrations/versions/2025_01_15_1400_update_email_nullable.py": {
+      "contentHash": "a7fccb84ab746ae34cb4fc18f31555a6a5b8ebe61380d939a795af4c7b92d911",
+      "totalLines": 32,
+      "functions": 2,
+      "classes": 0,
+      "imports": 2,
+      "exports": 2
+    },
+    "auth/migrations/versions/2025_06_17_1059-11024bcbff0a_initial_migration.py": {
+      "contentHash": "8ef9b36f6f331a3952b5fa249c975f6994feff8da37b54aa436d6e8be2b52275",
+      "totalLines": 45,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/migrations/versions/2025_10_28_2235-9a77e8345d22_make_email_nullable.py": {
+      "contentHash": "e9fae0159cd5b790d2b59394cd1faf58c87ea4099a27aeb6ad8210428ce699bb",
+      "totalLines": 35,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/migrations/versions/2026_03_02_1200_add_unique_drfo_code.py": {
+      "contentHash": "c786aa9a6faedcd0838c3a62cb34377d0af4c35711468a6afbb18d6a7088d6fa",
+      "totalLines": 32,
+      "functions": 2,
+      "classes": 0,
+      "imports": 2,
+      "exports": 2
+    },
+    "auth/migrations/versions/2026_03_25_1000_add_platform_admins_and_users_created_at.py": {
+      "contentHash": "2ed931300f30197b38a3be1d1ff13647069e9a563386bd8393003c9d878fee57",
+      "totalLines": 68,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/migrations/versions/2026_06_26_1500_add_users_identity_bound.py": {
+      "contentHash": "4574cd1cc7aa3cc89932208ec615b88ef09d63659c19c25dce455a93cd708774",
+      "totalLines": 38,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/migrations/versions/2026_06_27_1600_reset_google_users_identity_bound.py": {
+      "contentHash": "ffb7dd5f83019d3483e9cf41c2465a4d9dc0ee3e950c51fd9c4793b8878e7bc9",
+      "totalLines": 29,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/migrations/versions/2026_07_03_1500_add_keep_session_active.py": {
+      "contentHash": "ddebdc023898cf23e28c3af19ed30e054df03fceee87e10f5771269d6db28237",
+      "totalLines": 32,
+      "functions": 2,
+      "classes": 0,
+      "imports": 2,
+      "exports": 2
+    },
+    "auth/migrations/versions/2026_07_08_1535_create_onboarding_identity_tables.py": {
+      "contentHash": "46125be539ee25d8b78ce4c68249300bb9b8f81619e8462208a8a3e8bf84b94f",
+      "totalLines": 93,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/migrations/versions/2026_07_23_2100_add_platform_admin_role.py": {
+      "contentHash": "79dc24aff4d1943269297a4f7cdd0f2156a3f3e49b6a5ec67699a145256877d8",
+      "totalLines": 28,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/migrations/versions/2026_07_30_1200_add_support_access.py": {
+      "contentHash": "6d1bc6586a1ee5fdae2e2f352302885c0587ca8faa51e8911bd55947085923cd",
+      "totalLines": 145,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/migrations/versions/2026_07_30_1200_add_users_email_verified_at.py": {
+      "contentHash": "27436f0bcbb722bd868828123eec8bb5ee60ce72288a3656908b1405066b0f51",
+      "totalLines": 28,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/migrations/versions/2026_07_30_1500_add_support_sessions.py": {
+      "contentHash": "3da620be43c8059bf98a93b2a7cfe3aaff2dcbb7d5a0688610a89ab05ee381b8",
+      "totalLines": 119,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/migrations/versions/2026_08_01_1200_add_support_assignment_permits.py": {
+      "contentHash": "c476476f7317b5b574739a1ff5301219b5641658aee6665730bc996407b298e7",
+      "totalLines": 80,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/migrations/versions/2026_08_03_1200_add_support_session_organization.py": {
+      "contentHash": "7d36479b5a45911a66a387f666ee05ce6eeae555de2684fb452299afbcbe59af",
+      "totalLines": 23,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/pyproject.toml": {
+      "contentHash": "bdf5447cfcacc66a80d09c5eb701e8c8bc57a83d3c278475fb1d4c8e530290ed",
+      "totalLines": 63,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/requirements-test.txt": {
+      "contentHash": "85cf8ea660ffa57b620d8301ea5dfed2c4a45e3e74631590cff936098c2741d8",
+      "totalLines": 8,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/requirements.txt": {
+      "contentHash": "9e0b403ba44bbb1ec88b2c6b59fef8f6651c6f3016fa4d506cf76f90b6cf4829",
+      "totalLines": 86,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/routes/admin_router.py": {
+      "contentHash": "2f1834f28dc4f6354179e20a8d11b1b41687631dfbfaaa26607ee8aa9abe1ce9",
+      "totalLines": 357,
+      "functions": 9,
+      "classes": 4,
+      "imports": 12,
+      "exports": 13
+    },
+    "auth/routes/auth_google.py": {
+      "contentHash": "47479dc65b1eff9f778b16cd86ec391693c0f8601f8bf286500ef835dbc57bbf",
+      "totalLines": 2305,
+      "functions": 80,
+      "classes": 0,
+      "imports": 34,
+      "exports": 80
+    },
+    "auth/routes/auth.py": {
+      "contentHash": "8ba9166c26b646c63e7b29a77996dc68f5fd040d6e3fc1fbe9c682bd7582e69e",
+      "totalLines": 835,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/routes/diia_auth_router.py": {
+      "contentHash": "33379de9e189fe1a9d2fdb7f4e16e98cf7aa2d9a36aadfd541bcdfa9061ea650",
+      "totalLines": 96,
+      "functions": 3,
+      "classes": 0,
+      "imports": 9,
+      "exports": 3
+    },
+    "auth/routes/support_access_router.py": {
+      "contentHash": "b96ed872392a8c1b4b5db159ddd2a8f9a6425788ad74a6f5103f4fce0ebd45a1",
+      "totalLines": 781,
+      "functions": 18,
+      "classes": 7,
+      "imports": 15,
+      "exports": 25
+    },
+    "auth/routes/support_session_router.py": {
+      "contentHash": "f29a4f9f01f9b5ffd2e1525abc3f1cb93e42656fdc25f921c7460da91613d132",
+      "totalLines": 465,
+      "functions": 9,
+      "classes": 3,
+      "imports": 15,
+      "exports": 12
+    },
+    "auth/routes/user_router.py": {
+      "contentHash": "7b30129a32ebaec7ab62ce13f8a52f16065e02f5c133c44cc25b22475ee23745",
+      "totalLines": 933,
+      "functions": 15,
+      "classes": 1,
+      "imports": 12,
+      "exports": 16
+    },
+    "auth/schemas/diia_auth.py": {
+      "contentHash": "04e3150e6d931578062165f6eac34bd250c147f714c01d96d92c8de1c49b9ce2",
+      "totalLines": 49,
+      "functions": 0,
+      "classes": 3,
+      "imports": 3,
+      "exports": 3
+    },
+    "auth/schemas/user.py": {
+      "contentHash": "6b50cc11b5c92b7623a3ce53ed6cc188d0500cabb7bc7f187f1e55da97a55086",
+      "totalLines": 238,
+      "functions": 0,
+      "classes": 14,
+      "imports": 6,
+      "exports": 14
+    },
+    "auth/schemas/validators.py": {
+      "contentHash": "ffd4e266655a309cb8c9046ecbb6faa7b637e01e31d88f51c5ce0fc3063882c1",
+      "totalLines": 71,
+      "functions": 4,
+      "classes": 0,
+      "imports": 2,
+      "exports": 4
+    },
+    "auth/security/admin_auth.py": {
+      "contentHash": "5670f90a27a09466db2dc8c184bbeab091bcb69423d5a2cf362cf327e9bda31f",
+      "totalLines": 93,
+      "functions": 2,
+      "classes": 0,
+      "imports": 10,
+      "exports": 2
+    },
+    "auth/security/security.py": {
+      "contentHash": "3e1a65b6e03b587fd58a64db835c0b7db7adc995957e5716edcf8506e738e018",
+      "totalLines": 105,
+      "functions": 2,
+      "classes": 0,
+      "imports": 9,
+      "exports": 2
+    },
+    "auth/security/service_auth.py": {
+      "contentHash": "89566a8f0c9104ea21baa1a1646d104da0ca3b2129301eb694fb57ade3313186",
+      "totalLines": 121,
+      "functions": 3,
+      "classes": 0,
+      "imports": 6,
+      "exports": 3
+    },
+    "auth/security/support_access.py": {
+      "contentHash": "df44229b24281cffaf0bbed399831be51bf4e664620a5b7636ebfa1eae209077",
+      "totalLines": 160,
+      "functions": 9,
+      "classes": 0,
+      "imports": 13,
+      "exports": 9
+    },
+    "auth/services/auth.py": {
+      "contentHash": "49a02a3545d909956cd3d2a88142fc7bf4a7682849288e110bcd4c833e672fef",
+      "totalLines": 34,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/services/credit_system_client.py": {
+      "contentHash": "712fadf1dc4ad330247475a8def4f88cf743620657dc68f5939cce403bc021de",
+      "totalLines": 77,
+      "functions": 1,
+      "classes": 0,
+      "imports": 4,
+      "exports": 1
+    },
+    "auth/services/diia_auth_service.py": {
+      "contentHash": "e195ded95f15555e692e818f8cc47e48562c63968a274dbc57147a23d8ddab72",
+      "totalLines": 380,
+      "functions": 2,
+      "classes": 1,
+      "imports": 9,
+      "exports": 3
+    },
+    "auth/services/diia_exchange_code_service.py": {
+      "contentHash": "54de8ef1a5ff55b5b2d4451ce5b53c18e96f6f9b509b3d4fe4c08c4f81c568dc",
+      "totalLines": 46,
+      "functions": 0,
+      "classes": 1,
+      "imports": 5,
+      "exports": 1
+    },
+    "auth/services/dps_kep_identity_client.py": {
+      "contentHash": "75e86c18d7c2f5cf3868d8616264745ca7ddc280da29f3b25a834099b8c0ea86",
+      "totalLines": 187,
+      "functions": 5,
+      "classes": 0,
+      "imports": 7,
+      "exports": 5
+    },
+    "auth/services/email_sender.py": {
+      "contentHash": "a044e281926fbe9091095f55794952b2f05bbc2831b88514b965703743e9e7c5",
+      "totalLines": 89,
+      "functions": 3,
+      "classes": 0,
+      "imports": 8,
+      "exports": 3
+    },
+    "auth/services/identity_resolver_service.py": {
+      "contentHash": "aca798add3ea1f5647bdc383e8c804c298b79c0cec0cd4eaceecfb36ddc7de18",
+      "totalLines": 147,
+      "functions": 0,
+      "classes": 3,
+      "imports": 6,
+      "exports": 3
+    },
+    "auth/services/kafka/consumer.py": {
+      "contentHash": "68e0171102521346325ebaa5348d3c83dac6404afc835856241e372e3e057e11",
+      "totalLines": 34,
+      "functions": 0,
+      "classes": 1,
+      "imports": 4,
+      "exports": 1
+    },
+    "auth/services/kafka/producer.py": {
+      "contentHash": "dc16595469e9405e17d73bd654daaee0517f2bf66e6b80237185ad7c91328f1a",
+      "totalLines": 30,
+      "functions": 0,
+      "classes": 1,
+      "imports": 4,
+      "exports": 1
+    },
+    "auth/services/network_security_service.py": {
+      "contentHash": "e899d88897b9adeca0fddc68a231129fedd4f44338a092dd00e4e87f03efc908",
+      "totalLines": 81,
+      "functions": 0,
+      "classes": 1,
+      "imports": 4,
+      "exports": 1
+    },
+    "auth/services/notification_preference_client.py": {
+      "contentHash": "c88f955bac60e77724c6a9c72279f3d667d40658b942af2b4b4861999004d53a",
+      "totalLines": 68,
+      "functions": 4,
+      "classes": 0,
+      "imports": 4,
+      "exports": 4
+    },
+    "auth/services/redis_client.py": {
+      "contentHash": "7043548b34997ea1fc2eea1049f385c65760df902c2032fdfa6ce707d5c5a90d",
+      "totalLines": 13,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/services/redis_service.py": {
+      "contentHash": "6e03fac4a43b5ddbbefa7618f6bb49299bff740793414752ba2f25f982080d07",
+      "totalLines": 236,
+      "functions": 0,
+      "classes": 1,
+      "imports": 8,
+      "exports": 1
+    },
+    "auth/services/redis/redis_client.py": {
+      "contentHash": "068961f0ab6485fabe74a7ad82c6ece25efc5200981b4d206a3048dffcfb84d8",
+      "totalLines": 13,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "auth/services/redis/session_redis.py": {
+      "contentHash": "65439aff30e65e37cf6a84d7865d3c9c2105ef899ecea265f469e41161621851",
+      "totalLines": 16,
+      "functions": 0,
+      "classes": 1,
+      "imports": 1,
+      "exports": 1
+    },
+    "auth/services/session_redis.py": {
+      "contentHash": "65439aff30e65e37cf6a84d7865d3c9c2105ef899ecea265f469e41161621851",
+      "totalLines": 16,
+      "functions": 0,
+      "classes": 1,
+      "imports": 1,
+      "exports": 1
+    },
+    "auth/services/support_sessions.py": {
+      "contentHash": "5cf6644b516cee370edd1496ea4eef22561835e7e37affb61341eedd8a0c4a07",
+      "totalLines": 496,
+      "functions": 21,
+      "classes": 0,
+      "imports": 12,
+      "exports": 21
+    },
+    "auth/services/support_target_validator.py": {
+      "contentHash": "5143dfe50926a750492ba2fcae321906d1e94214c1dd9a6b07dd07e234692e9a",
+      "totalLines": 49,
+      "functions": 1,
+      "classes": 0,
+      "imports": 5,
+      "exports": 1
+    },
+    "auth/services/support_ticket_validation_client.py": {
+      "contentHash": "324afcceab0213a6f5db30b625b6dcce235a2d914d2db27d569f3b54912dbe5c",
+      "totalLines": 67,
+      "functions": 1,
+      "classes": 0,
+      "imports": 4,
+      "exports": 1
+    },
+    "auth/services/user_service.py": {
+      "contentHash": "4c6e22a591566b1a48b63e7b25ae71bb1a8b7d82d890cd293b5da26e279c59fa",
+      "totalLines": 140,
+      "functions": 0,
+      "classes": 1,
+      "imports": 6,
+      "exports": 1
+    },
+    "auth/start.sh": {
+      "contentHash": "0adfe8ccb40e83e90dea96fe3cb5471152c82c70df71e01849bc29c5d67057fc",
+      "totalLines": 9,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "auth/utils/jwt.py": {
+      "contentHash": "d969bcfb3ae578def1d2977dab4bc927f5013d09c792611368c7cf300ca23b53",
+      "totalLines": 72,
+      "functions": 6,
+      "classes": 0,
+      "imports": 4,
+      "exports": 6
+    },
+    "auth/utils/validators.py": {
+      "contentHash": "dba17c3a18be219401d92506b8f48be461a619ec4618dfa89072a2784db64a6d",
+      "totalLines": 93,
+      "functions": 3,
+      "classes": 0,
+      "imports": 1,
+      "exports": 3
+    },
+    "office-user/.dockerignore": {
+      "contentHash": "65d6d15be5c60731dd23162bf427ff702337f2377f0068f60bb0475b3d1507c8",
+      "totalLines": 106,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/alembic.ini": {
+      "contentHash": "f838a7746e2848a60a55ce43cfda960004fde51af2a1ed28115029301dba475b",
+      "totalLines": 120,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/app/__init__.py": {
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "totalLines": 1,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/app/taskiq_core/__init__.py": {
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "totalLines": 1,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/app/taskiq_core/broker.py": {
+      "contentHash": "e499962054887a2744361543cc71b22cc82492c687ced08e6c9d9f336772573c",
+      "totalLines": 33,
+      "functions": 1,
+      "classes": 0,
+      "imports": 4,
+      "exports": 1
+    },
+    "office-user/app/taskiq_core/tasks.py": {
+      "contentHash": "de8d382e6304131be0bfb55a7e663554da22263a02dd61d98464d87749ba421a",
+      "totalLines": 234,
+      "functions": 5,
+      "classes": 0,
+      "imports": 13,
+      "exports": 5
+    },
+    "office-user/config.py": {
+      "contentHash": "297e4107f1b42697eaea48e7094e53f7a54604a0700b6e019c9f7890535c86dd",
+      "totalLines": 278,
+      "functions": 2,
+      "classes": 1,
+      "imports": 7,
+      "exports": 3
+    },
+    "office-user/core/__init__.py": {
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "totalLines": 1,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/core/billing_guard.py": {
+      "contentHash": "9e235591ba6d2680d6f5db02e6f73278db3f6917dfe1f3ead9c880b54e88bd81",
+      "totalLines": 51,
+      "functions": 1,
+      "classes": 1,
+      "imports": 2,
+      "exports": 2
+    },
+    "office-user/core/billing.py": {
+      "contentHash": "40d42b3212f109c624d943c12671fdb45a2aa3c2b190c01653c63dddc73cb0d0",
+      "totalLines": 22,
+      "functions": 0,
+      "classes": 0,
+      "imports": 3,
+      "exports": 0
+    },
+    "office-user/database/__init__.py": {
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "totalLines": 1,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/database/database.py": {
+      "contentHash": "edaefa725073f180488ab861dd79e8ffa7f72788e406d24074181c70f16aae41",
+      "totalLines": 323,
+      "functions": 10,
+      "classes": 0,
+      "imports": 14,
+      "exports": 10
+    },
+    "office-user/database/models/__init__.py": {
+      "contentHash": "26b7d9d61cd5e64758ca8b73373567b26cc192d05b6ffc4d551acd1ee09bf8ae",
+      "totalLines": 35,
+      "functions": 0,
+      "classes": 0,
+      "imports": 18,
+      "exports": 0
+    },
+    "office-user/database/models/contractor_participant.py": {
+      "contentHash": "2352166c72583e378ac9de3444290a8dca9116c30e0ab8c890e6a4da035175f7",
+      "totalLines": 213,
+      "functions": 0,
+      "classes": 2,
+      "imports": 4,
+      "exports": 2
+    },
+    "office-user/database/models/contractor_to_fop_owner_offer.py": {
+      "contentHash": "857e0feb0b98c52f4033ba6ada49449ea5687f6071decaf0fb8607501a26c82a",
+      "totalLines": 39,
+      "functions": 0,
+      "classes": 1,
+      "imports": 3,
+      "exports": 1
+    },
+    "office-user/database/models/contractor_to_fop_transition_audit.py": {
+      "contentHash": "bae775af0a7a387a4f6cc025b0fa19497d7df06672460b7416885a97a4fee9a3",
+      "totalLines": 18,
+      "functions": 0,
+      "classes": 1,
+      "imports": 3,
+      "exports": 1
+    },
+    "office-user/database/models/contractor_to_fop_transition.py": {
+      "contentHash": "6176bfea48937231b6c8bc0f5284d44aaf0b848ebce093121e21dac49a569cb6",
+      "totalLines": 23,
+      "functions": 0,
+      "classes": 1,
+      "imports": 3,
+      "exports": 1
+    },
+    "office-user/database/models/fop_payment_responsibility_audit_log.py": {
+      "contentHash": "1396a0356609c8ee076a1da0693906ea58d5633ac564bfbbaf1474b9abbe8860",
+      "totalLines": 23,
+      "functions": 0,
+      "classes": 1,
+      "imports": 3,
+      "exports": 1
+    },
+    "office-user/database/models/fop_payment_responsibility.py": {
+      "contentHash": "6ece924549783b4d4f121e94a0d97830af8f388f0d5cc60cebd42b10b51993b1",
+      "totalLines": 190,
+      "functions": 0,
+      "classes": 5,
+      "imports": 4,
+      "exports": 5
+    },
+    "office-user/database/models/fop_staff_invite.py": {
+      "contentHash": "9ad7bb0b9615a7247a0c306b269532032b8892ed0fb33d70df2b4d56766a4108",
+      "totalLines": 115,
+      "functions": 0,
+      "classes": 1,
+      "imports": 3,
+      "exports": 1
+    },
+    "office-user/database/models/kveds_to_organizations.py": {
+      "contentHash": "3be1a1d76d88447ae8777050ffc416cb223e1a176aaf2ac027ba685860c5e586",
+      "totalLines": 13,
+      "functions": 0,
+      "classes": 1,
+      "imports": 2,
+      "exports": 1
+    },
+    "office-user/database/models/kveds.py": {
+      "contentHash": "1a5e440b39554fba23c8a857f6b13caa2e53023a1daaca02cb0af12fa5c41f22",
+      "totalLines": 22,
+      "functions": 0,
+      "classes": 1,
+      "imports": 4,
+      "exports": 1
+    },
+    "office-user/database/models/organization_event_journal.py": {
+      "contentHash": "4561390509092abd71ca68565db2ff2d306709575e57326dda7db4eb548dffec",
+      "totalLines": 40,
+      "functions": 0,
+      "classes": 1,
+      "imports": 3,
+      "exports": 1
+    },
+    "office-user/database/models/organization_invite.py": {
+      "contentHash": "47ed845ae00712b0ebbaa33cd057fe0a6bfdcf8b557dbabc2f015680ee8c8827",
+      "totalLines": 162,
+      "functions": 0,
+      "classes": 1,
+      "imports": 3,
+      "exports": 1
+    },
+    "office-user/database/models/organization_notification_settings.py": {
+      "contentHash": "23b199d7daa37ce8d9ccbe05cb7a47c83f0d03c332f3831a52e62fe67991384b",
+      "totalLines": 33,
+      "functions": 0,
+      "classes": 1,
+      "imports": 4,
+      "exports": 1
+    },
+    "office-user/database/models/organizations.py": {
+      "contentHash": "621235807394c04609c7bf52a728b63bad337df3780bf74f41cdcb5280b31949",
+      "totalLines": 312,
+      "functions": 0,
+      "classes": 3,
+      "imports": 4,
+      "exports": 3
+    },
+    "office-user/database/models/person_profile.py": {
+      "contentHash": "972b6fe649ca74b67fe98dd067d7a95e62b49e405825641f37b4551ee79c6206",
+      "totalLines": 24,
+      "functions": 0,
+      "classes": 1,
+      "imports": 3,
+      "exports": 1
+    },
+    "office-user/database/models/primary_contractor_onboarding_intent.py": {
+      "contentHash": "d53ac7465378274501967a7ce87a173b99b47bef65d8c562d3d58c851fad0b47",
+      "totalLines": 24,
+      "functions": 0,
+      "classes": 1,
+      "imports": 3,
+      "exports": 1
+    },
+    "office-user/database/models/tax_control_inspection.py": {
+      "contentHash": "b73b783f15a59ac654ce10d24221e9194d38a4bbb176fc1e4dc64f5c31e911ff",
+      "totalLines": 137,
+      "functions": 0,
+      "classes": 4,
+      "imports": 5,
+      "exports": 4
+    },
+    "office-user/database/models/user_organization_access.py": {
+      "contentHash": "590f2b9de2da4f5c2066f45533f942b06c195a72162cfa7b85774cdaaf0c05aa",
+      "totalLines": 90,
+      "functions": 0,
+      "classes": 1,
+      "imports": 4,
+      "exports": 1
+    },
+    "office-user/database/models/user_organization_role.py": {
+      "contentHash": "f9d1d5058a73021877ae37b1db01a49fa7c8304da145ebed77813124d3cde18a",
+      "totalLines": 33,
+      "functions": 0,
+      "classes": 1,
+      "imports": 4,
+      "exports": 1
+    },
+    "office-user/docker-compose.test.yaml": {
+      "contentHash": "5e1256bffa7f2adb5e795ecd5cf81e454caa052d63de343a498bc61eff533ffe",
+      "totalLines": 42,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/docker-compose.yaml": {
+      "contentHash": "875c24eab32b637b2d87b7179ae34f51343a2b8bf345049fe3e06640cfab6979",
+      "totalLines": 38,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/Dockerfile": {
+      "contentHash": "458c69d2d3c3386d6b238582dd399ea69e9e807afda2968d3033e32733e82e9b",
+      "totalLines": 48,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/docs/__init__.py": {
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "totalLines": 1,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/docs/ASYNC_MCP_FLOW.md": {
+      "contentHash": "143a969e531ed7a69c7af5d15a26a7c529bb88209ef95bb35dae9d6aee898d9b",
+      "totalLines": 41,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/docs/organization_docs.py": {
+      "contentHash": "b096c5aa84ece5e69ed30d758ed05c832a6b6265629d2ee83b409f25585c0aa6",
+      "totalLines": 2530,
+      "functions": 0,
+      "classes": 1,
+      "imports": 0,
+      "exports": 1
+    },
+    "office-user/docs/organizations_from_documents.md": {
+      "contentHash": "7c4c97dcab92124caa8b7c741b8cbe74cfbef718850da1a19b05837144a72990",
+      "totalLines": 39,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/docs/role_based_access.md": {
+      "contentHash": "e2e43e079b65149e2a5e1587f6849a17feb24c1136b4bdd1d407cc047b8adc7e",
+      "totalLines": 1723,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/docs/TASKIQ_MIGRATION.md": {
+      "contentHash": "283aa59cefe910c34de7a31e55ac55c7d609574d6395d4267f653a326ad19dee",
+      "totalLines": 34,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/logging_middleware.py": {
+      "contentHash": "e9f5ef60fc7338626482ab44d26aa70aabf2ad328268156e051c0ece9cf8cca9",
+      "totalLines": 111,
+      "functions": 0,
+      "classes": 1,
+      "imports": 9,
+      "exports": 1
+    },
+    "office-user/main.py": {
+      "contentHash": "fc91b4adf14b5dbc8036f8579468cf327a114dd4c29d16e0b3d26113151f3fe4",
+      "totalLines": 519,
+      "functions": 9,
+      "classes": 0,
+      "imports": 31,
+      "exports": 9
+    },
+    "office-user/mcp_integration/__init__.py": {
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "totalLines": 1,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/mcp_integration/kafka_service.py": {
+      "contentHash": "8d0832334dae9bf94e7843f3072f86fdcf742d36789ddd62997058de38532d43",
+      "totalLines": 146,
+      "functions": 0,
+      "classes": 1,
+      "imports": 8,
+      "exports": 1
+    },
+    "office-user/mcp_integration/mcp_server.py": {
+      "contentHash": "436b0ae570000580fb3ad54a9054f3b69e08fcb13485b5fcd4f53f06985f7708",
+      "totalLines": 299,
+      "functions": 2,
+      "classes": 0,
+      "imports": 6,
+      "exports": 2
+    },
+    "office-user/mcp_integration/openapi_to_mcp.py": {
+      "contentHash": "2b6c603e7e3d04054c4164c20281e8863f0cc921da4b2219a25d931790630531",
+      "totalLines": 1046,
+      "functions": 3,
+      "classes": 0,
+      "imports": 5,
+      "exports": 3
+    },
+    "office-user/mcp_integration/test_mcp_tools.py": {
+      "contentHash": "e7e3c3a8bfb1c4c99257c5fd11e7dc43248cab29e2aa0c946ebb3602955e2d93",
+      "totalLines": 372,
+      "functions": 3,
+      "classes": 0,
+      "imports": 7,
+      "exports": 3
+    },
+    "office-user/middleware/service_auth_middleware.py": {
+      "contentHash": "2564ab5a4dd7cd6ab905551fdebe9b495a4a0ee53313a7103510bdb8f3e2f34a",
+      "totalLines": 266,
+      "functions": 4,
+      "classes": 2,
+      "imports": 6,
+      "exports": 6
+    },
+    "office-user/migrations/README": {
+      "contentHash": "d1661f1d9e406a9f667132576eaaf497c525485b8834a48e6889bae865014210",
+      "totalLines": 5,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/migrations/script.py.mako": {
+      "contentHash": "dea06b1c17fb17b0a1283508762348b62497ac3a6041d33bb11d182b3a5a0b9d",
+      "totalLines": 29,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/migrations/versions/2025_01_20_1200-change_organization_access_to_bidirectional.py": {
+      "contentHash": "7e5d3def9e54c493a6b6a2f5d143097ea19166ae4ca443dec84b38e76b8c9dbb",
+      "totalLines": 236,
+      "functions": 2,
+      "classes": 0,
+      "imports": 4,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2025_01_21_1000-add_access_request_table.py": {
+      "contentHash": "7c843ebd9c0427d5a81cb0cab92cdc6d9b28a3c89466e799cac15708b238f5db",
+      "totalLines": 130,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2025_06_18_1110-364137df0aa5_initial_migration.py": {
+      "contentHash": "8fc9c6bd736bd95ba01c9f176f965ef71b7aa62c28e557d44d403dba44c7be53",
+      "totalLines": 66,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2025_06_23_0953-b931406fb518_set_sting_colimn.py": {
+      "contentHash": "e8dfe56c68b73fcde62c6146cfe8f936c28fdf4167b04a70669222af37b30437",
+      "totalLines": 51,
+      "functions": 2,
+      "classes": 0,
+      "imports": 4,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2025_10_02_1013-124684188aa4_add_dps_fields_no_unique.py": {
+      "contentHash": "1b959f7f78a16bf525dd8cc15738cba59aa3b3f106a4a663c6371f34231e189c",
+      "totalLines": 103,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2025_10_07_1705-8f2f9b0a3c2a_add_cert_valid_to.py": {
+      "contentHash": "cdb2b9030e63da16a230e238cf751caef934ad07e5b2bcf17cf89545f737f603",
+      "totalLines": 32,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2025_11_26_0539-94f64e07c536_add_organization_access_table.py": {
+      "contentHash": "4bef687bdf9e79952aa9126404dd1acb73f6de74c74da407ead5bea2dd43492f",
+      "totalLines": 62,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2025_11_26_1200_make_organizations_user_id_nullable.py": {
+      "contentHash": "e93e7d6492f96a15658027623e78e2fbfefdfdfe1436b41ccf3b65c512b38981",
+      "totalLines": 64,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2025_12_02_2254-efc998db4240_modified_tax_group_column_to_be_.py": {
+      "contentHash": "8a6cdd705fcb9e48e0c6abe954a042aeab854df9864feb8ad5e0e0283b141568",
+      "totalLines": 91,
+      "functions": 2,
+      "classes": 0,
+      "imports": 4,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2025_12_12_1424-19417dd24d69_fix_tax_group_values.py": {
+      "contentHash": "d59455536dbdcf0844e89ec7fde48373e605ef51c2f53a11661ddcb5e1d77787",
+      "totalLines": 33,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2025_12_17_2207-5499f9bc28db_add_user_organization_access_table_and_.py": {
+      "contentHash": "2c3011fc3db98e02e615b2985c05dd9e598dc85e697b0a02b4fed13b2fb3e6d9",
+      "totalLines": 197,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2025_12_18_2320-add_last_org_id_to_user_org_access.py": {
+      "contentHash": "f56f51c978eae0de135540ad733bc3934a0247d65550f739a9ce485e5af5e298",
+      "totalLines": 53,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2025_12_18_2330-fix_last_org_id_type.py": {
+      "contentHash": "cb7d2dedb63a997a2dd8715fd38497f9cc729f24293018e0c7ba524faa7f2738",
+      "totalLines": 112,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_01_28_1200-add_rbac_roles.py": {
+      "contentHash": "cd149c7ab384d6f4a732fc1b987a5e013e6c8fd34f7e11d5f907131b778093a8",
+      "totalLines": 238,
+      "functions": 2,
+      "classes": 0,
+      "imports": 4,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_02_09_2200-add_org_type_column.py": {
+      "contentHash": "815b4a2e291d9e2b04f05aee93f9b6e98312ddc2fb3a2b726dee3e160167a5bf",
+      "totalLines": 77,
+      "functions": 2,
+      "classes": 0,
+      "imports": 4,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_03_20_1200-add_is_main_to_kveds_junction.py": {
+      "contentHash": "f735e1a1aa2d06e32bc6421e4830844062c8e770ba3d9a47cfa00e0f9c20ad31",
+      "totalLines": 56,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_03_20_1400-add_email_to_organizations.py": {
+      "contentHash": "77ab15151f2a672f1a7bc60d2777b9a7b8c0f3f69bb6b5e73bfef15a49e0288f",
+      "totalLines": 55,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_04_08_1200-backfill_kveds_to_organizations.py": {
+      "contentHash": "bee2f6199499250b6610a9d309abb49913b1b3df6c3935996fc10f0551d61109",
+      "totalLines": 180,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_04_13_1500-add_primary_bank_iban.py": {
+      "contentHash": "281df420600ce665cfaf9b9d3977a626034ec7f49d2e240f788dba3e8d08418b",
+      "totalLines": 55,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_04_14_1100-resync_kveds_junction_mismatch.py": {
+      "contentHash": "094ca2a79ab287bf590c6e2423ad5cdcc1b7db649e0ab0a9acbe0230b4605dea",
+      "totalLines": 155,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_04_15_1800-add_organizations_search_trgm_index.py": {
+      "contentHash": "d1b5205886e1299547d50c75071e60fade1e7f1ffa9a7f0161a577e2a48a0174",
+      "totalLines": 82,
+      "functions": 2,
+      "classes": 0,
+      "imports": 2,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_05_01_1000-add_findesk_rbac_roles.py": {
+      "contentHash": "d3966c7deb86773d9263ae127e0cf32744d7c0ec8df8bd50a64001791d8e20bc",
+      "totalLines": 52,
+      "functions": 2,
+      "classes": 0,
+      "imports": 2,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_05_18_1345-fpr_02_create_fop_payment_responsibilities.py": {
+      "contentHash": "01f0e4a1ae896ced6cac6f4e23236a76f3e3122b359fa703a06bc255f7e47313",
+      "totalLines": 74,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_05_18_1400-fpr_03_add_fop_payment_responsibility_constraints.py": {
+      "contentHash": "a544c8748180f8fdb3ab4726e7e1a9654dfaa0f0d60aee2414aadabe7d4ba29f",
+      "totalLines": 143,
+      "functions": 4,
+      "classes": 0,
+      "imports": 3,
+      "exports": 4
+    },
+    "office-user/migrations/versions/2026_05_18_1430-fpr_04_add_payer_responsibility_audit_logs.py": {
+      "contentHash": "20484d18f7487595184409cfaba0fc0784fa44e5cc0c608e3a292da08c774c18",
+      "totalLines": 62,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_05_29_1000-create_organization_invites.py": {
+      "contentHash": "fa069158eab31ddc3549fa29de551edfb4d123aad2d0a89f875bbcb01cf08ac8",
+      "totalLines": 82,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_06_04_1100-create_tax_control_inspections.py": {
+      "contentHash": "0cce3f12161778e033a84fe79395e83f0ca7078bfe28104edad6818bb21adb4f",
+      "totalLines": 141,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_06_10_1530-admin_free_organization_access.py": {
+      "contentHash": "a86ac9de8c27dfea080155de0aad8ede3de02e546cd048733a81d1447f2fcdc1",
+      "totalLines": 60,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_06_24_1200-add_actual_contacts_to_organizations.py": {
+      "contentHash": "f5a8f1c5339c9c60b74157af1930c8a5e101a3a9826c1db644cdf8938d221499",
+      "totalLines": 54,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_06_25_1200-remove_fop_entrepreneur_role.py": {
+      "contentHash": "2a64f7a5f2b8369e367ba77513be8e3db3dd26b37efa215427e62d669d15fe39",
+      "totalLines": 54,
+      "functions": 2,
+      "classes": 0,
+      "imports": 2,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_01_2100-allow_user_level_outsourcer_invites.py": {
+      "contentHash": "ed8f4bfac9d0e63ef5f65d97374c2c98b82664269ceeb960b4ae0c87a899b53d",
+      "totalLines": 35,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_02_0905-add_invite_target_organization.py": {
+      "contentHash": "54f912cc4cc63eb196c208e590be996782aa1fc0d8ba80ce5bc5a93b8aa50b9a",
+      "totalLines": 47,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_02_1305-create_organization_notification_settings.py": {
+      "contentHash": "56bdab1284b7217776288a683a622c34f0bbc15b2a5ee14878314ae56fa561c8",
+      "totalLines": 58,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_02_1700-add_user_org_access_status.py": {
+      "contentHash": "5b2534e5c7664761960c8d15a6e89a6a2e54a705c874b3898eddd1eff50a3b70",
+      "totalLines": 34,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_07_2100-create_person_profiles.py": {
+      "contentHash": "8054e2c3fc04425f25e87227bffade6f25ac7dcc87fdb8fbc2deed524268258a",
+      "totalLines": 39,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_09_1105-add_auditor_access_role.py": {
+      "contentHash": "3ea8896a601cee5065e20bb76a7a68827a0fd1d22c40352dfe0f840d913858ec",
+      "totalLines": 48,
+      "functions": 2,
+      "classes": 0,
+      "imports": 2,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_09_1435-add_owner_paid_invite_fpr_fields.py": {
+      "contentHash": "ff59ca0ebc2fd8258c0a926421ed85acd4607e2fa463b583c63be83c6b43dbf3",
+      "totalLines": 155,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_09_2100-create_contractor_participants.py": {
+      "contentHash": "44a795e2de0029c4471e490fa09b558b51109621a8c7fc0627f3c163ee27a6d2",
+      "totalLines": 120,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_10_1805-add_contractor_participant_terminated_at.py": {
+      "contentHash": "435b961c07375e1fb1734025b00dda2ec2fcda3330ee80b95c1027916bd4a449",
+      "totalLines": 29,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_13_1040-create_organization_event_journal.py": {
+      "contentHash": "39bd78aaa2824bbe7e5ef9fd420f69ad0eaa1228825038ee82d2791a31d74ada",
+      "totalLines": 71,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_13_1045-restore_organization_access_foreign_keys.py": {
+      "contentHash": "d35830f968c267257f9b2fd66745f6930174114ed3578a89becbab53433d1cbb",
+      "totalLines": 74,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_14_1400-add_invite_requester_type.py": {
+      "contentHash": "5a9f1fae2fe7c88e5440c2d3a5dc8eb876cf684ffb66d39ce61a6d3cf33298de",
+      "totalLines": 51,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_14_1700-normalize_fop_member_roles.py": {
+      "contentHash": "e59b5e05aa5f8e2370f8a6205926e241c6a396e8cbae70ac84bcfc82cabc7695",
+      "totalLines": 39,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_15_0500-add_invite_target_type.py": {
+      "contentHash": "86a824036ed46d019ddbcdbdf65d6d66d72cafdb1ecbc0b7a7a544e8ed39114f",
+      "totalLines": 50,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_15_1200-add_invite_requester_person_profile.py": {
+      "contentHash": "8419d59335d31c03ed115c002113e77fbccfb480aea936ed3f609df6c18a182a",
+      "totalLines": 46,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_16_1300-add_contractor_participant_profile_context.py": {
+      "contentHash": "b18d2f8642dc25c3e815d7a5e3195408b68537bce31ef5ebdd64fcf32e55d6cb",
+      "totalLines": 57,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_17_1300-owner_paid_pending_payment.py": {
+      "contentHash": "670de823bdbaa4e71de59e0d28e5cb8107f8458f75bfe1d188b4d61461b8b778",
+      "totalLines": 93,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_17_1545-defer_contractor_participant_billing.py": {
+      "contentHash": "f3f3959282b5a389ec8aa39ba291d700f33ca4c4923bb25545028431c2fe1a84",
+      "totalLines": 67,
+      "functions": 2,
+      "classes": 0,
+      "imports": 2,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_17_2200-expand_contractor_participant_status.py": {
+      "contentHash": "6a203b6111c338b5d5a43b25a18b77e5cd60abd795f195574d0b54d9021e90ad",
+      "totalLines": 60,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_18_0038-backfill_owner_paid_contractor_links.py": {
+      "contentHash": "efa3758df23c7d2eaf89ff2561db8c2879b8dd69aa768388b174f062b4d3f277",
+      "totalLines": 53,
+      "functions": 2,
+      "classes": 0,
+      "imports": 2,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_20_1500-contractor_to_fop_transition.py": {
+      "contentHash": "d0c0b92c1519c47531d2c751903d3a3a5ac605f44a6e5a511e8fb474581b853c",
+      "totalLines": 46,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_20_1600-contractor_to_fop_owner_offers.py": {
+      "contentHash": "10e91fae4a3499756e6b44c653ee653a0f38d0f4aa5ff20b723b764637f3b4e7",
+      "totalLines": 44,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_20_1700-contractor_to_fop_transition_audit.py": {
+      "contentHash": "c282c5a5020a42b4ed4c95e3c86356ad899920fd4ad053300e87d343ab485d04",
+      "totalLines": 36,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_20_1800-contractor_to_fop_owner_offer_payer_snapshot.py": {
+      "contentHash": "f0bf54cd54378e52ba2fefea7a12672c71a622c11e5cba8e5ad9238ab5a25336",
+      "totalLines": 55,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_21_1000-expand_owner_paid_billing_status.py": {
+      "contentHash": "d2d811f12ad172fee20498b150af45951da7ef8ae16562018f3a870401f04d9e",
+      "totalLines": 38,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_21_1300-add_person_profile_address.py": {
+      "contentHash": "be15e9a3e9d11a11f935b0c9e037710054d0bc5f7bbc23d3d0df3e1075a10699",
+      "totalLines": 33,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_21_1635-track_participant_access_suspension.py": {
+      "contentHash": "a2d6a8d18e8136116213be0cc5c773f36d0d4acb3a73a8e9a6f15e2066cc1645",
+      "totalLines": 91,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_22_1700-create_fop_staff_invites.py": {
+      "contentHash": "a526a9f817eb7518cbeee66c2a9b9746132e15921f38f5bac5bef512fb396372",
+      "totalLines": 65,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_22_1900-add_fop_staff_billing_link.py": {
+      "contentHash": "dfbbfc637dcd23722d0ecfa638ce52b4aba1b9934fcdf02972d45e963915ee58",
+      "totalLines": 86,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_22_2200-add_fop_staff_invite_delivery_snapshot.py": {
+      "contentHash": "86a5c5a46b1728f05c6ad8890e579891edb87e80451ebd5f266fd90ca70e830e",
+      "totalLines": 46,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_07_24_1530-add_fop_staff_payment_processing.py": {
+      "contentHash": "a0d1740d0bb2ea629600d124bb437550a466616a8c439a7162957e6389104b21",
+      "totalLines": 134,
+      "functions": 2,
+      "classes": 0,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/migrations/versions/2026_08_03_1200-primary_contractor_onboarding_intents.py": {
+      "contentHash": "0f10539218ca4f8eefaad197c8b9082242f0d785d7cd5aa6b720c8221bb5a898",
+      "totalLines": 32,
+      "functions": 2,
+      "classes": 0,
+      "imports": 2,
+      "exports": 2
+    },
+    "office-user/OFFICE_USER_MICROSERVICE_DESCRIPTION.md": {
+      "contentHash": "185f398a718a0f2f048927443b2a48789b0fc60995a0fe6c8862c9a8074604c8",
+      "totalLines": 295,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/pyproject.toml": {
+      "contentHash": "5d23a2535034f69d131dfe9713b437796502de76873e9b446f29a97c43252405",
+      "totalLines": 55,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/pytest.ini": {
+      "contentHash": "767ceb6c2e0b62bed47a3687f0ad2af5227e3f10538a1a007f1b971e428986a3",
+      "totalLines": 10,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/requirements-test.txt": {
+      "contentHash": "85cf8ea660ffa57b620d8301ea5dfed2c4a45e3e74631590cff936098c2741d8",
+      "totalLines": 8,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/requirements.txt": {
+      "contentHash": "b79ae56ee72bc60b30b607d849dbee729a2127ef04063142ed8b3120a3d400b8",
+      "totalLines": 90,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/routers/admin_router.py": {
+      "contentHash": "e94a8ec84a28f4388e66abc73f56e1d06205666e74278ba492e59a5d7c1170bf",
+      "totalLines": 1062,
+      "functions": 18,
+      "classes": 1,
+      "imports": 19,
+      "exports": 19
+    },
+    "office-user/routers/admin_test_notifications.py": {
+      "contentHash": "aed1e4dadb5b3132fdf3cadef3efb60e0882d5c843816f08eb88b3170fd5ac27",
+      "totalLines": 157,
+      "functions": 2,
+      "classes": 1,
+      "imports": 9,
+      "exports": 3
+    },
+    "office-user/routers/contractor_participant_router.py": {
+      "contentHash": "f7d8b6dc34a68d133e088799c859941661ae82f2ea3a07edeb33664b7a810d7f",
+      "totalLines": 403,
+      "functions": 16,
+      "classes": 5,
+      "imports": 12,
+      "exports": 21
+    },
+    "office-user/routers/contractor_to_fop_transition_router.py": {
+      "contentHash": "37d66d6f4b428b141b6c8dbecd24f4a3f62ad8944836db578d48ecdc9a29bce4",
+      "totalLines": 217,
+      "functions": 7,
+      "classes": 0,
+      "imports": 15,
+      "exports": 7
+    },
+    "office-user/routers/fop_payment_responsibility_internal_router.py": {
+      "contentHash": "057f1913a67b7a362b89287ee9fd52f883fda49042e79ac1ecd7482baeed3e14",
+      "totalLines": 1172,
+      "functions": 25,
+      "classes": 26,
+      "imports": 18,
+      "exports": 51
+    },
+    "office-user/routers/fop_payment_responsibility_router.py": {
+      "contentHash": "d0875445335808d44900e59c8d0fed88da60ad1259bd9fb1e7b02ea9086e9664",
+      "totalLines": 274,
+      "functions": 9,
+      "classes": 0,
+      "imports": 9,
+      "exports": 9
+    },
+    "office-user/routers/fop_staff_invite_router.py": {
+      "contentHash": "5b0eec899e323e9348a232382239ef54eff586341b69d16ed53b9a557ab7afc9",
+      "totalLines": 445,
+      "functions": 21,
+      "classes": 1,
+      "imports": 19,
+      "exports": 22
+    },
+    "office-user/routers/invite_router.py": {
+      "contentHash": "4bb770f1aefad677a88ed2f8c19066cf128d3239dc81aab8343a14c5e6e62dc9",
+      "totalLines": 3040,
+      "functions": 28,
+      "classes": 10,
+      "imports": 26,
+      "exports": 38
+    },
+    "office-user/routers/onboarding_router.py": {
+      "contentHash": "f00b95cebae8390ad08dfa75cca1dc07ae12bd3d3ce3b54a097adfa669ed31bf",
+      "totalLines": 570,
+      "functions": 7,
+      "classes": 2,
+      "imports": 20,
+      "exports": 9
+    },
+    "office-user/routers/organization_access_router.py": {
+      "contentHash": "c8502265d5f2665167783b62a83bdc6f1a5814c0126f7e021196050db028f5c9",
+      "totalLines": 575,
+      "functions": 4,
+      "classes": 0,
+      "imports": 14,
+      "exports": 4
+    },
+    "office-user/routers/organization_documents_router.py": {
+      "contentHash": "7a4e8a1598cad9a1393aadfe3cd1c852ace37decf08b6233aeac26cd075f25b6",
+      "totalLines": 703,
+      "functions": 4,
+      "classes": 0,
+      "imports": 29,
+      "exports": 4
+    },
+    "office-user/routers/organization_dps_router.py": {
+      "contentHash": "e33279dee1e7187ff6b6006308037ac471903f97436662c3205040bbf3dfc497",
+      "totalLines": 1421,
+      "functions": 9,
+      "classes": 0,
+      "imports": 33,
+      "exports": 9
+    },
+    "office-user/routers/organization_event_journal_internal_router.py": {
+      "contentHash": "201fbb5cf101636c24a81cec5c6c0ae72b8095422b84396270a25b52083abf32",
+      "totalLines": 169,
+      "functions": 2,
+      "classes": 2,
+      "imports": 12,
+      "exports": 4
+    },
+    "office-user/routers/organization_event_journal_router.py": {
+      "contentHash": "659f67e48aa6b96c1ce0ecad80abf93ecda20f5eafe09e2fb10b7566960d2c8b",
+      "totalLines": 196,
+      "functions": 2,
+      "classes": 0,
+      "imports": 12,
+      "exports": 2
+    },
+    "office-user/routers/organization_internal_router.py": {
+      "contentHash": "1f147b8b506f4507e562f4b5e9ed080421f0c78d10009e78945d498280a7d5b2",
+      "totalLines": 772,
+      "functions": 14,
+      "classes": 0,
+      "imports": 20,
+      "exports": 14
+    },
+    "office-user/routers/organization_notification_settings_router.py": {
+      "contentHash": "5d8a6b53c1bafb818be2ce2edde74f1ea43ba265f1bd35682dc57f09387ce594",
+      "totalLines": 110,
+      "functions": 3,
+      "classes": 0,
+      "imports": 10,
+      "exports": 3
+    },
+    "office-user/routers/organization_read_router.py": {
+      "contentHash": "21edd1ea8c95674ec4a558497d3dc3e98c2fa957d920aa022cd93ee4341e0513",
+      "totalLines": 2129,
+      "functions": 22,
+      "classes": 2,
+      "imports": 34,
+      "exports": 24
+    },
+    "office-user/routers/organization_router.py": {
+      "contentHash": "86c2c06afee1484e0b3cdcf12b8a9a6902344874b9750c89d34182baefdaf87c",
+      "totalLines": 58,
+      "functions": 0,
+      "classes": 0,
+      "imports": 19,
+      "exports": 0
+    },
+    "office-user/routers/organization_write_router.py": {
+      "contentHash": "43bb8e917cee7c11acb639869f725a047fbc33065d45e3f17ee935f546847a67",
+      "totalLines": 804,
+      "functions": 11,
+      "classes": 0,
+      "imports": 17,
+      "exports": 11
+    },
+    "office-user/routers/user_organization_access_router.py": {
+      "contentHash": "e23d63860be599fa33dd7a0e868dcf84976955429f94a16f655867b2b72d580d",
+      "totalLines": 2116,
+      "functions": 20,
+      "classes": 3,
+      "imports": 25,
+      "exports": 23
+    },
+    "office-user/routers/users_internal_router.py": {
+      "contentHash": "4d87ae9b27ea434a8abad5bdfb984d0149d5040d053c8da991bffb1c7b48a76c",
+      "totalLines": 85,
+      "functions": 1,
+      "classes": 0,
+      "imports": 9,
+      "exports": 1
+    },
+    "office-user/schemas/contractor_to_fop_transition.py": {
+      "contentHash": "228d8d0f37ccfebb39c26ded4d37419ecdcf958a8501aaf2f8627025db8a08ef",
+      "totalLines": 60,
+      "functions": 0,
+      "classes": 7,
+      "imports": 2,
+      "exports": 7
+    },
+    "office-user/schemas/dps_integration.py": {
+      "contentHash": "c550825dc721c436edb5efca4866277aae4129b8566ff3a5536a1623df038786",
+      "totalLines": 194,
+      "functions": 0,
+      "classes": 11,
+      "imports": 3,
+      "exports": 11
+    },
+    "office-user/schemas/fop_payment_responsibility.py": {
+      "contentHash": "8cbdd1e7f4f8dcacbf820c8f6ecf5dc3c31037fd3c0abc918e52ff104a5db332",
+      "totalLines": 57,
+      "functions": 0,
+      "classes": 5,
+      "imports": 2,
+      "exports": 5
+    },
+    "office-user/schemas/fop_staff_invite.py": {
+      "contentHash": "b2c1377b243eee1446f3c6f6d6b516ddcdaa1b0ca82583074ba50272cb94363a",
+      "totalLines": 57,
+      "functions": 0,
+      "classes": 5,
+      "imports": 3,
+      "exports": 5
+    },
+    "office-user/schemas/kved.py": {
+      "contentHash": "24b25f44af2762c37dcf8a8ae4fcebb37a8cf7ae6bec1382b3bf82d8c4a6a7ed",
+      "totalLines": 13,
+      "functions": 0,
+      "classes": 1,
+      "imports": 2,
+      "exports": 1
+    },
+    "office-user/schemas/notification_settings.py": {
+      "contentHash": "9576a3ad1ffcb09ee49c80d2d78442b2bc7520fe1cb6151379b52559b876bfcb",
+      "totalLines": 75,
+      "functions": 0,
+      "classes": 8,
+      "imports": 1,
+      "exports": 8
+    },
+    "office-user/schemas/notifications.py": {
+      "contentHash": "f7fdc75759f9ced935fbbcf80fb0905712c2b811971dc08b421b7b0680988b25",
+      "totalLines": 51,
+      "functions": 0,
+      "classes": 3,
+      "imports": 3,
+      "exports": 3
+    },
+    "office-user/schemas/organization_update.py": {
+      "contentHash": "13e0ad6341e0fe246921c0621a71f6afd2ffa8d98760baef54fbfc633d1dd5e1",
+      "totalLines": 175,
+      "functions": 0,
+      "classes": 2,
+      "imports": 3,
+      "exports": 2
+    },
+    "office-user/schemas/organization.py": {
+      "contentHash": "b369ccdfad2390e140f42f743a6cde014b9cf88c6f32b7f0f680cf7704f119ba",
+      "totalLines": 631,
+      "functions": 0,
+      "classes": 23,
+      "imports": 3,
+      "exports": 23
+    },
+    "office-user/schemas/organizations.py": {
+      "contentHash": "4b28e51bdc84e7ab9ee1708c91affd8f5bf48b77632a64aed0ad5f464ebbbae7",
+      "totalLines": 7,
+      "functions": 0,
+      "classes": 1,
+      "imports": 3,
+      "exports": 1
+    },
+    "office-user/schemas/tax_control_inspection.py": {
+      "contentHash": "eb63fde250116d0449fd7f2dabfafdb54623b57de251cc3716b983f18222efbd",
+      "totalLines": 39,
+      "functions": 0,
+      "classes": 2,
+      "imports": 2,
+      "exports": 2
+    },
+    "office-user/schemas/user.py": {
+      "contentHash": "66def097f9f947d0414ed94b1564681712b7beab09f6ee4fde869d6ba8d65938",
+      "totalLines": 20,
+      "functions": 0,
+      "classes": 1,
+      "imports": 1,
+      "exports": 1
+    },
+    "office-user/scripts/activate_pending_owner_paid_accesses.py": {
+      "contentHash": "610f3b961a1b26c26835917d70b10718dfd06895680ae481299eef78be419379",
+      "totalLines": 92,
+      "functions": 2,
+      "classes": 0,
+      "imports": 6,
+      "exports": 2
+    },
+    "office-user/scripts/backfill_kveds_junction.py": {
+      "contentHash": "e9567e15d3e67b1e17994af94a7004493fbf68956e8a24d4bf3d11a580241f15",
+      "totalLines": 124,
+      "functions": 2,
+      "classes": 0,
+      "imports": 10,
+      "exports": 2
+    },
+    "office-user/scripts/backfill_owner_self_payer.py": {
+      "contentHash": "ba83f170b5778889cbba6e697c6a7d7c607cd97b1a7b570ca7e2f911e755f40b",
+      "totalLines": 320,
+      "functions": 6,
+      "classes": 1,
+      "imports": 14,
+      "exports": 7
+    },
+    "office-user/scripts/backfill_payer_responsibilities.py": {
+      "contentHash": "8f14c6827465cc1cb29dfe749fdb32af6585c8106396366976677afb81ac1d63",
+      "totalLines": 315,
+      "functions": 7,
+      "classes": 1,
+      "imports": 14,
+      "exports": 8
+    },
+    "office-user/scripts/backfill_person_profiles.py": {
+      "contentHash": "c62a0db24bf961c02baf2429edfaf82b78b84e847e0b813814a3e638c25b2bbb",
+      "totalLines": 232,
+      "functions": 9,
+      "classes": 1,
+      "imports": 11,
+      "exports": 10
+    },
+    "office-user/scripts/reconcile_fop_owners.py": {
+      "contentHash": "bdc7940ea020e59f296e89533a023504481ec0646570f7b2b93f1410ff9dcebc",
+      "totalLines": 194,
+      "functions": 5,
+      "classes": 1,
+      "imports": 15,
+      "exports": 6
+    },
+    "office-user/scripts/seed_kveds_from_organizations.py": {
+      "contentHash": "f1e02e9f9c4bb8c6ac96b2dad3e8baa0311678c26e7cff909b640e21a76172b0",
+      "totalLines": 215,
+      "functions": 4,
+      "classes": 0,
+      "imports": 12,
+      "exports": 4
+    },
+    "office-user/security/admin_auth.py": {
+      "contentHash": "85a9cea9e184f52655b249f5583a79c4310732207ff265acc22a72a9feb05d84",
+      "totalLines": 48,
+      "functions": 1,
+      "classes": 0,
+      "imports": 5,
+      "exports": 1
+    },
+    "office-user/security/security.py": {
+      "contentHash": "5c0ad17aa2fb88907d944a3d7827eca0f84f2c431a531046c68d73f0925b8a40",
+      "totalLines": 74,
+      "functions": 1,
+      "classes": 0,
+      "imports": 7,
+      "exports": 1
+    },
+    "office-user/services/clients/__init__.py": {
+      "contentHash": "252a1f3b66ae0e5d961266d699dab50768b26756493be360cb30672a760edae9",
+      "totalLines": 2,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/services/clients/base_auth.py": {
+      "contentHash": "93d8c543acee5ec414479d4fab8254f66deb02af59d363fac4034b14da4474c2",
+      "totalLines": 40,
+      "functions": 0,
+      "classes": 1,
+      "imports": 3,
+      "exports": 1
+    },
+    "office-user/services/clients/credit_system_client.py": {
+      "contentHash": "2810c4b3cce47eddff76275171e5bb75c883ab803656372392b82833713eea42",
+      "totalLines": 777,
+      "functions": 19,
+      "classes": 1,
+      "imports": 7,
+      "exports": 20
+    },
+    "office-user/services/clients/notifications_client.py": {
+      "contentHash": "4d8de5259e77f9e2341ac9735608fd57eb8f812ca328fcad798d3baabdc06154",
+      "totalLines": 195,
+      "functions": 0,
+      "classes": 2,
+      "imports": 8,
+      "exports": 2
+    },
+    "office-user/services/clients/organization_cleanup_client.py": {
+      "contentHash": "f7c7688aef71cd4cbb5611ed8311da028f9a27f83d85dfc614721e7457fc9b5c",
+      "totalLines": 89,
+      "functions": 1,
+      "classes": 0,
+      "imports": 5,
+      "exports": 1
+    },
+    "office-user/services/contractor_participant_service.py": {
+      "contentHash": "c809640bad6f2c5ef5b15c363f18078d1b6175a651803892dd563a2c3ab4e23c",
+      "totalLines": 1850,
+      "functions": 6,
+      "classes": 3,
+      "imports": 22,
+      "exports": 9
+    },
+    "office-user/services/contractor_to_fop_transition_service.py": {
+      "contentHash": "728726a0fe1c9058d948bff71d4bd7f15b9bc8a556ba55f171bc9f4872d735ba",
+      "totalLines": 902,
+      "functions": 0,
+      "classes": 2,
+      "imports": 22,
+      "exports": 2
+    },
+    "office-user/services/document_extraction_validator.py": {
+      "contentHash": "09502d5499b0b0880f66c5094e19f2fa185a093c6c39aa643aec6f8ff3142ee7",
+      "totalLines": 279,
+      "functions": 4,
+      "classes": 0,
+      "imports": 5,
+      "exports": 4
+    },
+    "office-user/services/documents_service.py": {
+      "contentHash": "4d5fb89acfb1cf76c5d66f2930c2b6f2a9115d75dd9c8ae93029944bc649d110",
+      "totalLines": 753,
+      "functions": 0,
+      "classes": 2,
+      "imports": 23,
+      "exports": 2
+    },
+    "office-user/services/domain_events_kafka_service.py": {
+      "contentHash": "46051a058e32d28296ecca0885ec47a2f8f9b54b6d7373912063c325c3da9178",
+      "totalLines": 562,
+      "functions": 7,
+      "classes": 2,
+      "imports": 8,
+      "exports": 9
+    },
+    "office-user/services/dps_organization_helpers.py": {
+      "contentHash": "905ed0c9a66f959d3faa095440d07512aea2070fa0aa6c57f6a61fb955f4f572",
+      "totalLines": 187,
+      "functions": 3,
+      "classes": 0,
+      "imports": 10,
+      "exports": 3
+    },
+    "office-user/services/dps_sync_service.py": {
+      "contentHash": "be6ac9be6a3d720136e4a38e0bd7671e17649468e8576d44c56c730bc1e1648b",
+      "totalLines": 335,
+      "functions": 1,
+      "classes": 1,
+      "imports": 11,
+      "exports": 2
+    },
+    "office-user/services/first_owner_notification_helper.py": {
+      "contentHash": "3243c93fbf09789a75a4b8d3c4aec1ca4ed720e2de14c30b10d234b2193353bf",
+      "totalLines": 213,
+      "functions": 2,
+      "classes": 1,
+      "imports": 8,
+      "exports": 3
+    },
+    "office-user/services/fop_owner_reconciliation_service.py": {
+      "contentHash": "20654b07fb93b5872425998e688fd5ceb547169352f548628cbe5064a1554048",
+      "totalLines": 231,
+      "functions": 1,
+      "classes": 3,
+      "imports": 9,
+      "exports": 4
+    },
+    "office-user/services/fop_payment_responsibility_service.py": {
+      "contentHash": "050ac66fa0824b3f1fe5388aec819ab13ce540965a49c42e19c9f3177034421e",
+      "totalLines": 2776,
+      "functions": 2,
+      "classes": 1,
+      "imports": 21,
+      "exports": 3
+    },
+    "office-user/services/fop_staff_invite_service.py": {
+      "contentHash": "40bf6d52b274df8e816236b252552b9156f5f1355454e0cfa3bd869dc808f806",
+      "totalLines": 1039,
+      "functions": 4,
+      "classes": 1,
+      "imports": 15,
+      "exports": 5
+    },
+    "office-user/services/fop_staff_lifecycle_lock.py": {
+      "contentHash": "dadf6fc43a67f2c56cfff6f5e6edd783e39c9a93f3988b2af41d022071c8413b",
+      "totalLines": 91,
+      "functions": 2,
+      "classes": 0,
+      "imports": 6,
+      "exports": 2
+    },
+    "office-user/services/kved_helpers.py": {
+      "contentHash": "5d53e803dee5047480d2cab48e606ac0a4391ce639c8914852e72a030a9bccb2",
+      "totalLines": 63,
+      "functions": 2,
+      "classes": 0,
+      "imports": 6,
+      "exports": 2
+    },
+    "office-user/services/kved_service.py": {
+      "contentHash": "b6e2ccd564c8e9d765f39feb62dc6ea15b8c5f127608d15971c902c7a54d37b8",
+      "totalLines": 579,
+      "functions": 7,
+      "classes": 0,
+      "imports": 18,
+      "exports": 7
+    },
+    "office-user/services/organization_access_service.py": {
+      "contentHash": "5e8f15f7001fd86d0b6ba6790c8428c45e18913012382db854c0ec8c86b685b5",
+      "totalLines": 827,
+      "functions": 0,
+      "classes": 1,
+      "imports": 8,
+      "exports": 1
+    },
+    "office-user/services/organization_access_status.py": {
+      "contentHash": "663426a560334eb82aebbdaba5def3905eac78c8a56b10b30115253b0c14dede",
+      "totalLines": 65,
+      "functions": 4,
+      "classes": 0,
+      "imports": 3,
+      "exports": 4
+    },
+    "office-user/services/organization_cache_service.py": {
+      "contentHash": "5f3f25fe8d512142ef1de02a6255deec613b91e0a9d8a6012304c6b704d611cc",
+      "totalLines": 285,
+      "functions": 0,
+      "classes": 1,
+      "imports": 10,
+      "exports": 1
+    },
+    "office-user/services/organization_event_journal_service.py": {
+      "contentHash": "b3782ff6ab7d083131358792062840a598d5ad9ba7a9070b891aaa2d4c46c030",
+      "totalLines": 344,
+      "functions": 1,
+      "classes": 1,
+      "imports": 11,
+      "exports": 2
+    },
+    "office-user/services/organization_update_service.py": {
+      "contentHash": "583ee8d31e55c62fe19913d36f29224110c344ac541fe8e53a8575d576a2e543",
+      "totalLines": 226,
+      "functions": 0,
+      "classes": 1,
+      "imports": 8,
+      "exports": 1
+    },
+    "office-user/services/person_profile_service.py": {
+      "contentHash": "5b1765f0a8291faf78c51357f56b1065b4a56e9bf637eaf29dc46a0e23d53277",
+      "totalLines": 74,
+      "functions": 3,
+      "classes": 0,
+      "imports": 6,
+      "exports": 3
+    },
+    "office-user/services/primary_contractor_onboarding_intent_service.py": {
+      "contentHash": "7dfd43ccf346d217d8d450af1aeab29404c5e74979be29c029f016e43365e5ec",
+      "totalLines": 43,
+      "functions": 2,
+      "classes": 1,
+      "imports": 4,
+      "exports": 3
+    },
+    "office-user/services/redis_service.py": {
+      "contentHash": "b43290aa942eae930c9c476502ad7424796e577f839f735ab45614097841c2d6",
+      "totalLines": 217,
+      "functions": 0,
+      "classes": 1,
+      "imports": 8,
+      "exports": 1
+    },
+    "office-user/services/tax_control_inspection_service.py": {
+      "contentHash": "41b062768a03f710e9b60a540fc2ec4fa13fb035eb4d2ad17465e6677832c99c",
+      "totalLines": 450,
+      "functions": 0,
+      "classes": 2,
+      "imports": 9,
+      "exports": 2
+    },
+    "office-user/services/user_auth_service.py": {
+      "contentHash": "a87ae628a5908b6223820edbf90e43ee51bc6a721162f4a4015ac29cceb12124",
+      "totalLines": 402,
+      "functions": 0,
+      "classes": 3,
+      "imports": 6,
+      "exports": 3
+    },
+    "office-user/services/user_organization_access_service.py": {
+      "contentHash": "a00ea9a28b3b5a67d723dd32bf56306d6264d00093f02d01c1c3c31339c87bc4",
+      "totalLines": 1303,
+      "functions": 4,
+      "classes": 1,
+      "imports": 10,
+      "exports": 5
+    },
+    "office-user/start.sh": {
+      "contentHash": "a956bef9d173495238a3e5ae11ffdff4bb68b7ccf6c315cbf8ac9821fe334f1c",
+      "totalLines": 21,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/TOOLS_DESCRIPTION.md": {
+      "contentHash": "dba0ed91809eb20d8f7a8b01a9f800494174b7c2f4c96b7de9508765ea039d5d",
+      "totalLines": 984,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/utils/access.py": {
+      "contentHash": "e0a7c198556da1bbe44c8214994c6d6bdb544326ca265679c184bf4286b788b7",
+      "totalLines": 162,
+      "functions": 3,
+      "classes": 0,
+      "imports": 7,
+      "exports": 3
+    },
+    "office-user/utils/bank_account_filter.py": {
+      "contentHash": "fa8eb4b0f96ab811cdf1c446dc3a19288c6c18f8663492a2717a047b1f4d039c",
+      "totalLines": 59,
+      "functions": 1,
+      "classes": 0,
+      "imports": 2,
+      "exports": 1
+    },
+    "office-user/utils/document_validator.py": {
+      "contentHash": "b1b614a0d71b2c5ceb7f0e9bdda7d77e1f7bb1bc67c8a6c1224a3d57f6dba3b8",
+      "totalLines": 52,
+      "functions": 1,
+      "classes": 0,
+      "imports": 3,
+      "exports": 1
+    },
+    "office-user/utils/file_api_client.py": {
+      "contentHash": "cccc47721547a3a5dd366cc2d1f18437c4abc19161e886bddea734e779e6418e",
+      "totalLines": 74,
+      "functions": 1,
+      "classes": 0,
+      "imports": 4,
+      "exports": 1
+    },
+    "office-user/utils/log_sanitization.py": {
+      "contentHash": "270cbb2dde0b5f938e706aaae634463f9b06ffade8dfb6af23c64f0a6223012c",
+      "totalLines": 33,
+      "functions": 2,
+      "classes": 1,
+      "imports": 2,
+      "exports": 3
+    },
+    "office-user/utils/ocr.py": {
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "totalLines": 1,
+      "functions": 0,
+      "classes": 0,
+      "imports": 0,
+      "exports": 0
+    },
+    "office-user/utils/organization_queries.py": {
+      "contentHash": "1bea745970d853b2ee5e3f228d8e0ebd55d7432785d22370256f87f0435ae43f",
+      "totalLines": 31,
+      "functions": 1,
+      "classes": 0,
+      "imports": 4,
+      "exports": 1
+    },
+    "office-user/utils/text_extractor.py": {
+      "contentHash": "25592e7e53e1b16f543e3f36f54404a946e9d20e029707426edaccec5a573ba1",
+      "totalLines": 88,
+      "functions": 1,
+      "classes": 0,
+      "imports": 3,
+      "exports": 1
+    },
+    "office-user/utils/url_utils.py": {
+      "contentHash": "e693410fefcd1c2d638a3007aa6200a3e0b96eaa8769160edc34eacd2a72df53",
+      "totalLines": 28,
+      "functions": 1,
+      "classes": 0,
+      "imports": 2,
+      "exports": 1
+    }
+  }
+}

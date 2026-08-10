@@ -53,6 +53,14 @@ flowchart LR
 
 Structural baseline: [structural-fingerprints.json](./structural-fingerprints.json).
 
+## Web viewer
+
+Статичний viewer лежить у [`site/`](./site/), не потребує npm/node і використовує лише відносні assets та graph data. Після merge цього PR у `main` і ввімкнення GitHub Pages → **Source: GitHub Actions** очікувана HTTPS-адреса:
+
+<https://eon-plus-dev.github.io/Findesk-architecture-map/>
+
+Workflow: [Deploy sanitized architecture viewer](./.github/workflows/pages.yml).
+
 ## Останні зміни
 
 - `801d198` · 2026-08-10 · Merge pull request #3577: staging update for contractor payment cancellation.
