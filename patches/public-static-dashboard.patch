@@ -12,7 +12,7 @@ index 887477b..c35e5b7 100644
  import { useKeyboardShortcuts } from "./hooks/useKeyboardShortcuts";
 @@ -33,7 +32,6 @@ import {
  } from "./freshness";
- 
+
  // Lazy-load heavy / optional components so they ship in separate chunks.
 -const CodeViewer = lazy(() => import("./components/CodeViewer"));
  const LearnPanel = lazy(() => import("./components/LearnPanel"));
@@ -20,12 +20,12 @@ index 887477b..c35e5b7 100644
  const KeyboardShortcutsHelp = lazy(
 @@ -42,7 +40,6 @@ const KeyboardShortcutsHelp = lazy(
  const OnboardingOverlay = lazy(() => import("./components/OnboardingOverlay"));
- 
+
  const DEMO_MODE = import.meta.env.VITE_DEMO_MODE === "true";
 -const SESSION_TOKEN_KEY = "understand-anything-token";
  const ONBOARDING_DISMISSED_KEY = "ua-onboarding-dismissed-v1";
  type SidebarTab = "info" | "files";
- 
+
 @@ -77,69 +74,18 @@ function dataUrl(fileName: string, token: string | null): string {
   * Resolve the access token from the URL query string or sessionStorage.
   * If found in the URL, persist to sessionStorage and strip the param from the address bar.
@@ -68,7 +68,7 @@ index 887477b..c35e5b7 100644
 -  return <Dashboard accessToken={accessToken} />;
 +  return <Dashboard accessToken="" />;
  }
- 
+
  function Dashboard({ accessToken }: { accessToken: string }) {
    const setGraph = useDashboardStore((s) => s.setGraph);
 -  const setDomainGraph = useDashboardStore((s) => s.setDomainGraph);
@@ -96,13 +96,13 @@ index 887477b..c35e5b7 100644
 -  }, []);
 +  const metaTheme: ThemeConfig | null = null;
 +  const outputLanguage: string | undefined = undefined;
- 
+
    useEffect(() => {
      fetch(dataUrl("knowledge-graph.json", accessToken))
 @@ -215,53 +161,10 @@ function Dashboard({ accessToken }: { accessToken: string }) {
      });
    }, [accessToken]);
- 
+
 -  useEffect(() => {
 -    fetch(dataUrl("diff-overlay.json", accessToken))
 -      .then((res) => {
@@ -155,7 +155,7 @@ index 887477b..c35e5b7 100644
            graphFreshness={graphFreshness}
 @@ -272,12 +175,10 @@ function Dashboard({ accessToken }: { accessToken: string }) {
  }
- 
+
  function DashboardContent({
 -  accessToken,
    loadError,
@@ -188,7 +188,7 @@ index 887477b..c35e5b7 100644
 @@ -712,37 +608,8 @@ function DashboardContent({
            {sidebarContent}
          </aside>
- 
+
 -        {/* Code viewer slide-up overlay (collapsed state) */}
 -        {codeViewerOpen && !codeViewerExpanded && (
 -          <div className="absolute bottom-0 left-0 right-0 h-[40vh] bg-surface border-t border-border-subtle animate-slide-up z-20 overflow-hidden">
@@ -198,7 +198,7 @@ index 887477b..c35e5b7 100644
 -          </div>
 -        )}
        </div>
- 
+
 -      {/* Expanded code viewer modal */}
 -      {codeViewerOpen && codeViewerExpanded && (
 -        <div
@@ -228,7 +228,7 @@ index e4940f6..207dcbe 100644
 --- a/understand-anything-plugin/packages/dashboard/src/components/FileExplorer.tsx
 +++ b/understand-anything-plugin/packages/dashboard/src/components/FileExplorer.tsx
 @@ -141,17 +141,14 @@ function FileTreeRow({
- 
+
  export default function FileExplorer() {
    const graph = useDashboardStore((s) => s.graph);
 -  const openCodeViewer = useDashboardStore((s) => s.openCodeViewer);
@@ -236,7 +236,7 @@ index e4940f6..207dcbe 100644
    const { t } = useI18n();
    const entries = useMemo(() => buildFileTree(graph?.nodes ?? []), [graph]);
    const [expanded, setExpanded] = useState<Set<string>>(() => new Set());
- 
+
 -  // Navigate the graph first (drills into layer + selects node, which clears the
 -  // code viewer), then re-open the viewer so the source panel stays visible.
 +  // Public-static mode navigates to graph metadata only; source files are absent.
@@ -244,7 +244,7 @@ index e4940f6..207dcbe 100644
      navigateToNode(nodeId);
 -    openCodeViewer(nodeId);
    };
- 
+
    const toggleFolder = (folderPath: string) => {
 diff --git a/understand-anything-plugin/packages/dashboard/src/components/MobileLayout.tsx b/understand-anything-plugin/packages/dashboard/src/components/MobileLayout.tsx
 index e292bcc..90ae179 100644
@@ -253,12 +253,12 @@ index e292bcc..90ae179 100644
 @@ -16,13 +16,11 @@ import MobileBottomNav from "./MobileBottomNav";
  import type { MobileTab } from "./MobileBottomNav";
  import MobileDrawer from "./MobileDrawer";
- 
+
 -const CodeViewer = lazy(() => import("./CodeViewer"));
  const LearnPanel = lazy(() => import("./LearnPanel"));
  const PathFinderModal = lazy(() => import("./PathFinderModal"));
  const KeyboardShortcutsHelp = lazy(() => import("./KeyboardShortcutsHelp"));
- 
+
  interface Props {
 -  accessToken: string;
    showKeyboardHelp: boolean;
@@ -266,7 +266,7 @@ index e292bcc..90ae179 100644
    loadError: string | null;
 @@ -32,7 +30,6 @@ interface Props {
  }
- 
+
  export default function MobileLayout({
 -  accessToken,
    showKeyboardHelp,
@@ -284,7 +284,7 @@ index e292bcc..90ae179 100644
 @@ -62,11 +57,6 @@ export default function MobileLayout({
      if (selectedNodeId) setActiveTab("info");
    }, [selectedNodeId]);
- 
+
 -  // When a code viewer opens (e.g. from the Files tab) keep focus there
 -  useEffect(() => {
 -    if (codeViewerOpen) setSearchOpen(false);
@@ -296,7 +296,7 @@ index e292bcc..90ae179 100644
 @@ -198,26 +188,6 @@ export default function MobileLayout({
          onShowKeyboardHelp={() => setShowKeyboardHelp(true)}
        />
- 
+
 -      {/* Code viewer — always fullscreen on mobile */}
 -      {codeViewerOpen && (
 -        <div
@@ -317,7 +317,7 @@ index e292bcc..90ae179 100644
 -          </div>
 -        </div>
 -      )}
- 
+
        {/* Keyboard help (mobile reads it as a quick reference too) */}
        {showKeyboardHelp && (
 diff --git a/understand-anything-plugin/packages/dashboard/src/components/NodeInfo.tsx b/understand-anything-plugin/packages/dashboard/src/components/NodeInfo.tsx
@@ -333,7 +333,7 @@ index a92ad73..7ecbaa0 100644
    const viewMode = useDashboardStore((s) => s.viewMode);
    const domainGraph = useDashboardStore((s) => s.domainGraph);
 @@ -407,7 +406,7 @@ export default function NodeInfo() {
- 
+
        {node.filePath && (
          <div className="text-xs text-text-secondary mb-4 rounded-lg border border-border-subtle bg-elevated/60 p-3">
 -          <div className="flex items-start justify-between gap-3">
@@ -361,10 +361,10 @@ index 539ae0b..69eca4a 100644
 +++ b/understand-anything-plugin/packages/dashboard/vite.config.demo.ts
 @@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
  import path from "path";
- 
+
  export default defineConfig({
 -  base: "/demo/",
 +  base: "/Findesk-architecture-map/",
- 
+
    resolve: {
      alias: {

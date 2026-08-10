@@ -7,4 +7,3 @@
     "validate:graph": "node scripts/validate-graph.mjs data/knowledge-graph.json"
   }
 }
-
