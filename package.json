@@ -1,0 +1,10 @@
+{
+  "name": "findesk-architecture-map",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "validate:graph": "node scripts/validate-graph.mjs data/knowledge-graph.json"
+  }
+}
+
