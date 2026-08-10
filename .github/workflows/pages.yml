@@ -37,9 +37,10 @@ jobs:
         working-directory: upstream
         run: corepack enable && pnpm install --frozen-lockfile
       - name: Build dashboard
+        working-directory: upstream
         run: |
-          cp data/knowledge-graph.json upstream/understand-anything-plugin/packages/dashboard/public/knowledge-graph.json
-          pnpm --dir upstream --filter @understand-anything/dashboard build:demo
+          cp ../data/knowledge-graph.json understand-anything-plugin/packages/dashboard/public/knowledge-graph.json
+          pnpm --filter @understand-anything/dashboard build:demo
       - name: Verify public artifact
         run: |
           test -f upstream/understand-anything-plugin/packages/dashboard/dist/index.html
