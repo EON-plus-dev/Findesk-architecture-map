@@ -1,0 +1,370 @@
+diff --git a/understand-anything-plugin/packages/dashboard/src/App.tsx b/understand-anything-plugin/packages/dashboard/src/App.tsx
+index 887477b..c35e5b7 100644
+--- a/understand-anything-plugin/packages/dashboard/src/App.tsx
++++ b/understand-anything-plugin/packages/dashboard/src/App.tsx
+@@ -16,7 +16,6 @@ import ProjectOverview from "./components/ProjectOverview";
+ import FileExplorer from "./components/FileExplorer";
+ import WarningBanner from "./components/WarningBanner";
+ import StalenessBanner from "./components/StalenessBanner";
+-import TokenGate from "./components/TokenGate";
+ import MobileLayout from "./components/MobileLayout";
+ import { useIsMobile } from "./hooks/useIsMobile";
+ import { useKeyboardShortcuts } from "./hooks/useKeyboardShortcuts";
+@@ -33,7 +32,6 @@ import {
+ } from "./freshness";
+
+ // Lazy-load heavy / optional components so they ship in separate chunks.
+-const CodeViewer = lazy(() => import("./components/CodeViewer"));
+ const LearnPanel = lazy(() => import("./components/LearnPanel"));
+ const PathFinderModal = lazy(() => import("./components/PathFinderModal"));
+ const KeyboardShortcutsHelp = lazy(
+@@ -42,7 +40,6 @@ const KeyboardShortcutsHelp = lazy(
+ const OnboardingOverlay = lazy(() => import("./components/OnboardingOverlay"));
+
+ const DEMO_MODE = import.meta.env.VITE_DEMO_MODE === "true";
+-const SESSION_TOKEN_KEY = "understand-anything-token";
+ const ONBOARDING_DISMISSED_KEY = "ua-onboarding-dismissed-v1";
+ type SidebarTab = "info" | "files";
+
+@@ -77,69 +74,18 @@ function dataUrl(fileName: string, token: string | null): string {
+  * Resolve the access token from the URL query string or sessionStorage.
+  * If found in the URL, persist to sessionStorage and strip the param from the address bar.
+  */
+-function resolveInitialToken(): string | null {
+-  if (DEMO_MODE) return "__demo__";
+-  const params = new URLSearchParams(window.location.search);
+-  const urlToken = params.get("token");
+-  if (urlToken) {
+-    sessionStorage.setItem(SESSION_TOKEN_KEY, urlToken);
+-    // Clean the URL
+-    params.delete("token");
+-    const cleanSearch = params.toString();
+-    const newUrl =
+-      window.location.pathname + (cleanSearch ? `?${cleanSearch}` : "") + window.location.hash;
+-    window.history.replaceState(null, "", newUrl);
+-    return urlToken;
+-  }
+-  return sessionStorage.getItem(SESSION_TOKEN_KEY);
+-}
+-
+ function App() {
+-  const [accessToken, setAccessToken] = useState<string | null>(resolveInitialToken);
+-
+-  const handleTokenValid = useCallback((token: string) => {
+-    sessionStorage.setItem(SESSION_TOKEN_KEY, token);
+-    setAccessToken(token);
+-  }, []);
+-
+-  // In demo mode, skip token gate entirely
+-  if (DEMO_MODE) {
+-    return <Dashboard accessToken="__demo__" />;
+-  }
+-
+-  // Show the token gate when no token is available
+-  if (accessToken === null) {
+-    return <TokenGate onTokenValid={handleTokenValid} />;
+-  }
+-
+-  return <Dashboard accessToken={accessToken} />;
++  return <Dashboard accessToken="" />;
+ }
+
+ function Dashboard({ accessToken }: { accessToken: string }) {
+   const setGraph = useDashboardStore((s) => s.setGraph);
+-  const setDomainGraph = useDashboardStore((s) => s.setDomainGraph);
+-  const setDiffOverlay = useDashboardStore((s) => s.setDiffOverlay);
+   const [loadError, setLoadError] = useState<string | null>(null);
+   const [graphIssues, setGraphIssues] = useState<GraphIssue[]>([]);
+   const [graphFreshness, setGraphFreshness] =
+     useState<DashboardFreshnessReport | null>(null);
+-  const [metaTheme, setMetaTheme] = useState<ThemeConfig | null>(null);
+-  const [outputLanguage, setOutputLanguage] = useState<string | undefined>();
+-
+-  useEffect(() => {
+-    fetch(dataUrl("meta.json", accessToken))
+-      .then((r) => (r.ok ? r.json() : null))
+-      .then((meta) => {
+-        if (meta?.theme) setMetaTheme(meta.theme);
+-      })
+-      .catch(() => {});
+-    fetch(dataUrl("config.json", accessToken))
+-      .then((r) => (r.ok ? r.json() : null))
+-      .then((config) => {
+-        if (config?.outputLanguage) setOutputLanguage(config.outputLanguage);
+-      })
+-      .catch(() => {});
+-  }, []);
++  const metaTheme: ThemeConfig | null = null;
++  const outputLanguage: string | undefined = undefined;
+
+   useEffect(() => {
+     fetch(dataUrl("knowledge-graph.json", accessToken))
+@@ -215,53 +161,10 @@ function Dashboard({ accessToken }: { accessToken: string }) {
+     });
+   }, [accessToken]);
+
+-  useEffect(() => {
+-    fetch(dataUrl("diff-overlay.json", accessToken))
+-      .then((res) => {
+-        if (!res.ok) return null;
+-        return res.json();
+-      })
+-      .then((data: unknown) => {
+-        if (
+-          data &&
+-          typeof data === "object" &&
+-          "changedNodeIds" in data &&
+-          "affectedNodeIds" in data &&
+-          Array.isArray((data as Record<string, unknown>).changedNodeIds) &&
+-          Array.isArray((data as Record<string, unknown>).affectedNodeIds)
+-        ) {
+-          const d = data as { changedNodeIds: string[]; affectedNodeIds: string[] };
+-          if (d.changedNodeIds.length > 0) {
+-            setDiffOverlay(d.changedNodeIds, d.affectedNodeIds);
+-          }
+-        }
+-      })
+-      .catch(() => {});
+-  }, [setDiffOverlay]);
+-
+-  useEffect(() => {
+-    fetch(dataUrl("domain-graph.json", accessToken))
+-      .then((res) => {
+-        if (!res.ok) return null;
+-        return res.json();
+-      })
+-      .then((data: unknown) => {
+-        if (!data) return;
+-        const result = validateGraph(data);
+-        if (result.success && result.data) {
+-          setDomainGraph(result.data);
+-        } else if (result.fatal) {
+-          console.warn(`[domain-graph] validation failed: ${result.fatal}`);
+-        }
+-      })
+-      .catch(() => {});
+-  }, [setDomainGraph]);
+-
+   return (
+     <I18nProvider language={outputLanguage ?? "en"}>
+       <ThemeProvider metaTheme={metaTheme}>
+         <DashboardContent
+-          accessToken={accessToken}
+           loadError={loadError}
+           graphIssues={graphIssues}
+           graphFreshness={graphFreshness}
+@@ -272,12 +175,10 @@ function Dashboard({ accessToken }: { accessToken: string }) {
+ }
+
+ function DashboardContent({
+-  accessToken,
+   loadError,
+   graphIssues,
+   graphFreshness,
+ }: {
+-  accessToken: string;
+   loadError: string | null;
+   graphIssues: GraphIssue[];
+   graphFreshness: DashboardFreshnessReport | null;
+@@ -286,10 +187,6 @@ function DashboardContent({
+   const selectedNodeId = useDashboardStore((s) => s.selectedNodeId);
+   const tourActive = useDashboardStore((s) => s.tourActive);
+   const persona = useDashboardStore((s) => s.persona);
+-  const codeViewerOpen = useDashboardStore((s) => s.codeViewerOpen);
+-  const codeViewerExpanded = useDashboardStore((s) => s.codeViewerExpanded);
+-  const expandCodeViewer = useDashboardStore((s) => s.expandCodeViewer);
+-  const collapseCodeViewer = useDashboardStore((s) => s.collapseCodeViewer);
+   const pathFinderOpen = useDashboardStore((s) => s.pathFinderOpen);
+   const togglePathFinder = useDashboardStore((s) => s.togglePathFinder);
+   const nodeTypeFilters = useDashboardStore((s) => s.nodeTypeFilters);
+@@ -484,7 +381,6 @@ function DashboardContent({
+   if (isMobile) {
+     return (
+       <MobileLayout
+-        accessToken={accessToken}
+         showKeyboardHelp={showKeyboardHelp}
+         setShowKeyboardHelp={setShowKeyboardHelp}
+         loadError={loadError}
+@@ -712,37 +608,8 @@ function DashboardContent({
+           {sidebarContent}
+         </aside>
+
+-        {/* Code viewer slide-up overlay (collapsed state) */}
+-        {codeViewerOpen && !codeViewerExpanded && (
+-          <div className="absolute bottom-0 left-0 right-0 h-[40vh] bg-surface border-t border-border-subtle animate-slide-up z-20 overflow-hidden">
+-            <Suspense fallback={null}>
+-              <CodeViewer accessToken={accessToken} onExpand={expandCodeViewer} />
+-            </Suspense>
+-          </div>
+-        )}
+       </div>
+
+-      {/* Expanded code viewer modal */}
+-      {codeViewerOpen && codeViewerExpanded && (
+-        <div
+-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/65 backdrop-blur-sm p-4 sm:p-6"
+-          onMouseDown={collapseCodeViewer}
+-        >
+-          <div
+-            className="w-[calc(100vw-32px)] max-w-[1120px] h-[calc(100vh-32px)] sm:h-[calc(100vh-48px)] max-h-[820px] rounded-lg border border-border-medium bg-surface shadow-2xl overflow-hidden"
+-            onMouseDown={(event) => event.stopPropagation()}
+-          >
+-            <Suspense fallback={null}>
+-              <CodeViewer
+-                accessToken={accessToken}
+-                presentation="modal"
+-                onClose={collapseCodeViewer}
+-              />
+-            </Suspense>
+-          </div>
+-        </div>
+-      )}
+-
+       {/* Keyboard shortcuts help modal */}
+       {showKeyboardHelp && (
+         <Suspense fallback={null}>
+diff --git a/understand-anything-plugin/packages/dashboard/src/components/FileExplorer.tsx b/understand-anything-plugin/packages/dashboard/src/components/FileExplorer.tsx
+index e4940f6..207dcbe 100644
+--- a/understand-anything-plugin/packages/dashboard/src/components/FileExplorer.tsx
++++ b/understand-anything-plugin/packages/dashboard/src/components/FileExplorer.tsx
+@@ -141,17 +141,14 @@ function FileTreeRow({
+
+ export default function FileExplorer() {
+   const graph = useDashboardStore((s) => s.graph);
+-  const openCodeViewer = useDashboardStore((s) => s.openCodeViewer);
+   const navigateToNode = useDashboardStore((s) => s.navigateToNode);
+   const { t } = useI18n();
+   const entries = useMemo(() => buildFileTree(graph?.nodes ?? []), [graph]);
+   const [expanded, setExpanded] = useState<Set<string>>(() => new Set());
+
+-  // Navigate the graph first (drills into layer + selects node, which clears the
+-  // code viewer), then re-open the viewer so the source panel stays visible.
++  // Public-static mode navigates to graph metadata only; source files are absent.
+   const handleOpenFile = (nodeId: string) => {
+     navigateToNode(nodeId);
+-    openCodeViewer(nodeId);
+   };
+
+   const toggleFolder = (folderPath: string) => {
+diff --git a/understand-anything-plugin/packages/dashboard/src/components/MobileLayout.tsx b/understand-anything-plugin/packages/dashboard/src/components/MobileLayout.tsx
+index e292bcc..90ae179 100644
+--- a/understand-anything-plugin/packages/dashboard/src/components/MobileLayout.tsx
++++ b/understand-anything-plugin/packages/dashboard/src/components/MobileLayout.tsx
+@@ -16,13 +16,11 @@ import MobileBottomNav from "./MobileBottomNav";
+ import type { MobileTab } from "./MobileBottomNav";
+ import MobileDrawer from "./MobileDrawer";
+
+-const CodeViewer = lazy(() => import("./CodeViewer"));
+ const LearnPanel = lazy(() => import("./LearnPanel"));
+ const PathFinderModal = lazy(() => import("./PathFinderModal"));
+ const KeyboardShortcutsHelp = lazy(() => import("./KeyboardShortcutsHelp"));
+
+ interface Props {
+-  accessToken: string;
+   showKeyboardHelp: boolean;
+   setShowKeyboardHelp: (value: boolean) => void;
+   loadError: string | null;
+@@ -32,7 +30,6 @@ interface Props {
+ }
+
+ export default function MobileLayout({
+-  accessToken,
+   showKeyboardHelp,
+   setShowKeyboardHelp,
+   loadError,
+@@ -46,8 +43,6 @@ export default function MobileLayout({
+   const persona = useDashboardStore((s) => s.persona);
+   const viewMode = useDashboardStore((s) => s.viewMode);
+   const domainGraph = useDashboardStore((s) => s.domainGraph);
+-  const codeViewerOpen = useDashboardStore((s) => s.codeViewerOpen);
+-  const closeCodeViewer = useDashboardStore((s) => s.closeCodeViewer);
+   const pathFinderOpen = useDashboardStore((s) => s.pathFinderOpen);
+   const togglePathFinder = useDashboardStore((s) => s.togglePathFinder);
+   const { t } = useI18n();
+@@ -62,11 +57,6 @@ export default function MobileLayout({
+     if (selectedNodeId) setActiveTab("info");
+   }, [selectedNodeId]);
+
+-  // When a code viewer opens (e.g. from the Files tab) keep focus there
+-  useEffect(() => {
+-    if (codeViewerOpen) setSearchOpen(false);
+-  }, [codeViewerOpen]);
+-
+   const isLearnMode = tourActive || persona === "junior";
+   const infoContent = (
+     <>
+@@ -198,26 +188,6 @@ export default function MobileLayout({
+         onShowKeyboardHelp={() => setShowKeyboardHelp(true)}
+       />
+
+-      {/* Code viewer — always fullscreen on mobile */}
+-      {codeViewerOpen && (
+-        <div
+-          className="fixed inset-0 z-50 flex bg-black/70 backdrop-blur-sm p-2 sm:p-4"
+-          onMouseDown={closeCodeViewer}
+-        >
+-          <div
+-            className="flex-1 rounded-lg border border-border-medium bg-surface shadow-2xl overflow-hidden"
+-            onMouseDown={(event) => event.stopPropagation()}
+-          >
+-            <Suspense fallback={null}>
+-              <CodeViewer
+-                accessToken={accessToken}
+-                presentation="modal"
+-                onClose={closeCodeViewer}
+-              />
+-            </Suspense>
+-          </div>
+-        </div>
+-      )}
+
+       {/* Keyboard help (mobile reads it as a quick reference too) */}
+       {showKeyboardHelp && (
+diff --git a/understand-anything-plugin/packages/dashboard/src/components/NodeInfo.tsx b/understand-anything-plugin/packages/dashboard/src/components/NodeInfo.tsx
+index a92ad73..7ecbaa0 100644
+--- a/understand-anything-plugin/packages/dashboard/src/components/NodeInfo.tsx
++++ b/understand-anything-plugin/packages/dashboard/src/components/NodeInfo.tsx
+@@ -286,7 +286,6 @@ export default function NodeInfo() {
+   const navigateToNode = useDashboardStore((s) => s.navigateToNode);
+   const navigateToHistoryIndex = useDashboardStore((s) => s.navigateToHistoryIndex);
+   const setFocusNode = useDashboardStore((s) => s.setFocusNode);
+-  const openCodeViewer = useDashboardStore((s) => s.openCodeViewer);
+   const focusNodeId = useDashboardStore((s) => s.focusNodeId);
+   const viewMode = useDashboardStore((s) => s.viewMode);
+   const domainGraph = useDashboardStore((s) => s.domainGraph);
+@@ -407,7 +406,7 @@ export default function NodeInfo() {
+
+       {node.filePath && (
+         <div className="text-xs text-text-secondary mb-4 rounded-lg border border-border-subtle bg-elevated/60 p-3">
+-          <div className="flex items-start justify-between gap-3">
++          <div className="flex items-start gap-3">
+             <div className="min-w-0">
+               <div className="font-medium text-text-muted mb-1">{t.common.file}</div>
+               <div className="font-mono truncate" title={node.filePath}>
+@@ -419,13 +418,6 @@ export default function NodeInfo() {
+                 )}
+               </div>
+             </div>
+-            <button
+-              type="button"
+-              onClick={() => openCodeViewer(node.id)}
+-              className="shrink-0 text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded border border-accent/30 text-accent hover:text-accent-bright hover:border-accent/60 transition-colors"
+-            >
+-              {t.common.openCode}
+-            </button>
+           </div>
+         </div>
+       )}
+diff --git a/understand-anything-plugin/packages/dashboard/vite.config.demo.ts b/understand-anything-plugin/packages/dashboard/vite.config.demo.ts
+index 539ae0b..69eca4a 100644
+--- a/understand-anything-plugin/packages/dashboard/vite.config.demo.ts
++++ b/understand-anything-plugin/packages/dashboard/vite.config.demo.ts
+@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
+ import path from "path";
+
+ export default defineConfig({
+-  base: "/demo/",
++  base: "/Findesk-architecture-map/",
+
+   resolve: {
+     alias: {
