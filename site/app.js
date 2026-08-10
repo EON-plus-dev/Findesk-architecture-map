@@ -28,7 +28,9 @@ const selectNode = (id) => {
 };
 const filteredNodes = () => {
   const needle = query.trim().toLowerCase();
-  return graph.nodes.filter((node) => !needle || `${node.id} ${node.name} ${node.filePath || ''} ${node.summary || ''}`.toLowerCase().includes(needle)).slice(0, 160);
+  const layer = selectedLayerId && graph.layers.find((item) => item.id === selectedLayerId);
+  const layerIds = layer ? new Set(layer.nodeIds) : null;
+  return graph.nodes.filter((node) => (!layerIds || layerIds.has(node.id)) && (!needle || `${node.id} ${node.name} ${node.filePath || ''} ${node.summary || ''}`.toLowerCase().includes(needle))).slice(0, 160);
 };
 
 function renderStats() {
@@ -66,10 +68,7 @@ function renderTour() {
 
 function renderNodeList() {
   const nodes = filteredNodes();
-  const layer = selectedLayerId && graph.layers.find((item) => item.id === selectedLayerId);
-  const layerIds = layer ? new Set(layer.nodeIds) : null;
-  const visible = layerIds ? nodes.filter((node) => layerIds.has(node.id)) : nodes;
-  return visible.map((node) => `<button class="node-button" data-node-id="${esc(node.id)}"><small>${esc(nodePath(node))}</small><strong>${esc(nodeLabel(node))}</strong><span>${esc(node.summary)}</span></button>`).join('') || '<p class="muted">Нічого не знайдено.</p>';
+  return nodes.map((node) => `<button class="node-button" data-node-id="${esc(node.id)}"><small>${esc(nodePath(node))}</small><strong>${esc(nodeLabel(node))}</strong><span>${esc(node.summary)}</span></button>`).join('') || '<p class="muted">Нічого не знайдено.</p>';
 }
 
 function render() {
