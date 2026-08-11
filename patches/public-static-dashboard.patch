@@ -355,6 +355,22 @@ index a92ad73..7ecbaa0 100644
            </div>
          </div>
        )}
+diff --git a/understand-anything-plugin/packages/dashboard/src/components/GraphView.tsx b/understand-anything-plugin/packages/dashboard/src/components/GraphView.tsx
+index ef2ffe8..a7a3e09 100644
+--- a/understand-anything-plugin/packages/dashboard/src/components/GraphView.tsx
++++ b/understand-anything-plugin/packages/dashboard/src/components/GraphView.tsx
+@@ -1410,3 +1410,11 @@ function GraphViewInner() {
++  // The public architecture map is read as a diagram rather than explored
++  // container by container. Populate every cluster on layer entry so users
++  // see its file cards immediately; manual collapse still works afterwards.
++  useEffect(() => {
++    if (navigationLevel !== "layer-detail" || !containerIds) return;
++    for (const containerId of containerIds) expandContainer(containerId);
++  }, [navigationLevel, activeLayerId, containerIds, expandContainer]);
++
+   // ── Auto-expand triggers (Task 13) ─────────────────────────────────────
+   // Only meaningful in layer-detail; in overview mode there are no
+   // containers so all three effects no-op.
 diff --git a/understand-anything-plugin/packages/dashboard/vite.config.demo.ts b/understand-anything-plugin/packages/dashboard/vite.config.demo.ts
 index 539ae0b..69eca4a 100644
 --- a/understand-anything-plugin/packages/dashboard/vite.config.demo.ts
